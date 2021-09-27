@@ -3,6 +3,7 @@
 !.git*
 !.editorconfig
 !.nojekyll
+!.vscode
 
 # bundler cache
 _site
