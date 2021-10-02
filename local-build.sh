@@ -14,8 +14,7 @@ if [[ $1 == "run" ]]; then
     jekyll clean
 
 elif [[ $1 == "test" ]]; then
-    bundle exec jekyll b -d "_site$BASE_URL"
-    ${REPO_ROOT}/tools/test.sh
+    ${REPO_ROOT}/tools/deploy.sh --dry-run
     jekyll clean
 
 else
