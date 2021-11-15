@@ -3,7 +3,7 @@ title:      Particle System Tests      # Title
 author:     Robert Caddy               # Author Name
 date:       2021-11-05 16:00:00 -0400  # Date
 categories: [Cholla, Testing]     # Catagories, no more than 2
-tags:       [Testing, Particles, GitHub Actions] # Tags, any number
+tags:       [Testing, Particles, GitHub Actions, PRNG] # Tags, any number
 pin:        false                      # Should this post be pinned?
 toc:        true                       # Table of Contents?
 math:       false                      # Does this post contain math?
