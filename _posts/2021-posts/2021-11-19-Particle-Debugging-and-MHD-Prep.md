@@ -33,7 +33,7 @@ results at full precision. To find reasonable inputs I decided to use values
 from various MHD Riemann problems and so researched and wrote a blog post on
 them:
 [MHD Riemann Problems]({% post_url 2021-posts/2021-11-19-MHD-Riemann-Problems %}).
-Next week I plan to use Athena++ to simulate all the Riemann problems then use
+Next I plan to use Athena++ to simulate all the Riemann problems then use
 L/R values that span each wave as my test cases. The extracted HLLD solver,
 results from Athena++, and analysis notebook can all be found on in my
 [hydro sandbox](https://github.com/bcaddy/hydro-sandbox/tree/main/Athena-Code).
