@@ -133,9 +133,9 @@ Waves, left ot right:
     MAGNETOHYDRODYNAMIC FLOWS. *THE ASTROPHYSICAL JOURNAL*, *494*, 317–335.
     [https://iopscience.iop.org/article/10.1086/305176/meta](https://iopscience.iop.org/article/10.1086/305176/meta)
 
-[^rj]: Ryu, D., Jones, T. W., &#38; Frank, A. (n.d.). *Numerical
+[^rj]: Ryu, D., Jones, T. W., &#38; Frank, A. (1995). Numerical
     Magnetohydrodynamics in Astrophysics: Algorithm and Tests for
-    Multi-Dimensional Flow 1.* Retrieved November 18, 2021, from
+    Multi-Dimensional Flow 1. *The Astrophysical Journal*.
     [http://adsabs.harvard.edu/pdf/1995ApJ...452..785R](http://adsabs.harvard.edu/pdf/1995ApJ...452..785R)
 
 [^fr]: Einfeldt, B., Munz, C. D., Roe, P. L., &#38; W green, B. (1991). On
