@@ -103,10 +103,11 @@ This is the only test here that isn't a shock tube. We have identical initial
 conditions on both sides, except the \\( x \\)-velocity which is negative on the
 left side and positive on the right. This velocity, \\( V_0 \\), can lead to
 spurious oscillation with high order Godunov schemes[^charm] when \\( V_0 \\) is
-large (3) and so I've chosen a more conservative value of \\( V_0=2 \\) . These
+large (\\( V_0 \ge 3 \\)) and so I've chosen a more conservative value of \\( V_0=2 \\) . These
 diverging fluids lead to an extremely strong and fast rarefaction where the
-energy is dominated by kinetic energy and can often lead to cases with negative
-density or internal energy.
+energy is dominated by kinetic energy and can often reveal issues in code
+accuracy since it can lead to nonphysical states with negative density or
+internal energy
 
 Waves, left ot right:
 
