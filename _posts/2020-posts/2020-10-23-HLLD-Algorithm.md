@@ -183,6 +183,7 @@ $$
 $$
 
 ### Computing \\\( S_L^\* \\) and \\( S_R^\* \\)
+*Note that the second term is the Alfvên speed in the star state.*
 
 $$
     S_L^* = S_M - \frac{\mid B_x \mid}{\sqrt{\rho_L^*}}
