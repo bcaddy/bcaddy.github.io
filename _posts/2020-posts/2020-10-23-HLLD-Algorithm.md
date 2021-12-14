@@ -269,20 +269,33 @@ $$
 
 and we find the components of \\(\vec{U}\_k^\* \\) with the following equations.
 \\( \rho^\*\_k \\) was already computed when finding \\( S\_k^\* \\) and \\(
-v\_{x,k}^\* = S\_M \\)
+v\_{x,k}^\* = S\_M \\).
+
+Pressure is a bit more complicated. [Miyoshi & Kusano
+2005](https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub)
+show that, under their assumptions, \\( p^{\*}\_{T,L} = p^{\*\*}\_{T,L} = p^{\*}\_{T,R} = p^{\*\*}\_{T,R} = p^{\*}\_{T} = p^{\*\*}\_{T}\\)
+
+$$
+    p_T^* = p_{T,L} + \rho_L \left( S_L - v_{x,L} \right) \left( S_M - v_{x,L} \right)
+          = p_{T,R} + \rho_R \left( S_R - v_{x,R} \right) \left( S_M - v_{x,R} \right)
+$$
+
+They also note that
 
 $$
     p_T^* = \frac
-    {
-        \rho_R p_{T_L} \left( S_R - v_{x,R} \right)
-      - \rho_L p_{T_R} \left( S_L - v_{x,L} \right)
-      + \rho_L \rho_R
-        \left( S_R - v_{x,R} \right)
-        \left( S_L - v_{x,L} \right)
-        \left( v_{x,R} - v_{x,L} \right)
-    }
-    {\rho_R \left( S_R - v_{x,R} \right) - \rho_L \left( S_L - v_{x,L} \right)}
+            {
+                \rho_R p_{T_L} \left( S_R - v_{x,R} \right)
+            - \rho_L p_{T_R} \left( S_L - v_{x,L} \right)
+            + \rho_L \rho_R
+                \left( S_R - v_{x,R} \right)
+                \left( S_L - v_{x,L} \right)
+                \left( v_{x,R} - v_{x,L} \right)
+            }
+            {\rho_R \left( S_R - v_{x,R} \right) - \rho_L \left( S_L - v_{x,L} \right)}.
 $$
+
+And so
 
 $$
     E_k^* = \frac
@@ -292,7 +305,7 @@ $$
               + p_T^* S_M
               + B_x \left( \vec{v}_k \cdot \vec{B}_k - \vec{v}_k^* \cdot \vec{B}_k^* \right)
             }
-            {S_k - S_M}
+            {S_k - S_M}.
 $$
 
 We can find the \\( y \\) and \\( z \\) components of \\( \vec{v} \\) and
