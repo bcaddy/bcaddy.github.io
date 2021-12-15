@@ -34,7 +34,7 @@ waves; It ignores the slow magnetosonic wave.
 Note: since magnetic fields are inherently 3D due to the use of the outproduct even the 1D algorithm I write out here uses all three dimensions. The first dimension is always in the \\( x \\) direction however, again because of the cross product, the active elements of the magnetic field are in the \\( y \\) and \\( z \\) directions.
 
 - \\(k \\), Subscript to indicate left or right. i.e. \\( k = L \ \text{or}\ R \\)
-- \\(j \\), Subscript to indicate which dimension we're using. i.e. \\( i = x, y, \text{or}\; z \\)
+- \\(j \\), Subscript to indicate which dimension we're using. i.e. \\( j = x, y, \text{or}\; z \\)
 - \\(*  \\), Superscript that indicates if the variable is the value within the star region, ie the region between the fast magnetosonic waves and the Alfvén waves.
 - \\(**  \\), Superscript that indicates if the variable is the value within the star region, ie the region between the Alfvén waves and the contact discontinuity.
 - \\\( \vec{F} \\),  Flux
@@ -366,8 +366,8 @@ So all we need to compute directly is
 $$
     v_j^{**} = \frac
                 {
-                    v_L^* \sqrt{\rho_L^*}
-                  + v_R^* \sqrt{\rho_R^*}
+                    v_{j,L}^* \sqrt{\rho_L^*}
+                  + v_{j,R}^* \sqrt{\rho_R^*}
                   + \left( B_{j,R}^* - B_{j,L}^* \right) \text{sign}\left( B_x \right)
                 }
                 {\sqrt{\rho_L^*} + \sqrt{\rho_R^*}}
