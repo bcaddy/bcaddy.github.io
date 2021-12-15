@@ -339,7 +339,7 @@ algorithm is exactly the same for the left and right star states so the
 subscript \\\( k \\) is used to indicate \\( R \\) or \\( L \\).
 
 $$
-    \vec{F}_k^{**} = \vec{F}_k^* + S_k^{**} \left( \vec{U}_k^{**} - \vec{U}_k^* \right)
+    \vec{F}_k^{**} = \vec{F}_k^* + S_k^{*} \left( \vec{U}_k^{**} - \vec{U}_k^* \right)
 $$
 
 We already know some of the state variables from previous computations
