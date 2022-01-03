@@ -27,7 +27,7 @@ energy. That is something I will need to thoroughly test.
 
 ## Other
 
-- Continued working on my application to the 2022 Internation HPC Summer School
+- Finished my application to the 2022 Internation HPC Summer School and submitted it.
 
 ## Useful links
 
