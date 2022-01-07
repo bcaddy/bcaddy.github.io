@@ -33,6 +33,7 @@ HLLD solver finished.
 - Updated this website to Chirpy v5.0.1
 - Found a tool ([gtest2html](https://gitlab.uni-koblenz.de/agrt/gtest2html))to
   convert GoogleTest XML reports to HTML. It's basic but is good enough for now
+- Minor updates to resume and CV
 
 ## Useful links
 
