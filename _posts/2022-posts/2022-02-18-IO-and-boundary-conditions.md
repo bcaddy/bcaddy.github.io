@@ -32,14 +32,6 @@ Specifically the kernel `PackGhostCellsKernel` which in turn calls
 cell values from. I'm not sure of the best way to do that yet but I'm working on
 it.
 
-## Git Skill Share
-
-I'm presenting a skill share on git and GitHub to the research group this
-Friday. The goal was to start with creating your first repo all the way to some
-advanced usage and topics. My notes are in [this
-gist](https://gist.github.com/bcaddy/f822ba0786be8a1b8edcc7d74e6eca1b) and cover
-a lot of the git tools and techniques that I use regularly.
-
 ## Other
 
 - Read the dust polarization section (21.3) of *Physics of the Interstellar
