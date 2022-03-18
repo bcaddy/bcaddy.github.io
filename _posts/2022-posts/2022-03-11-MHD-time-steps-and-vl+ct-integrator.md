@@ -3,7 +3,7 @@ title:      MHD Time Steps & VL+CT Integrator  # Title
 author:     Robert Caddy               # Author Name
 date:       2022-03-11 15:59:03 -0400  # Date
 categories: [Cholla, MHD]     # Catagories, no more than 2
-tags:       [bugs, Constrained Transport, VL+CT, Van Leer]                     # Tags, any number
+tags:       [Bugs, Constrained Transport, VL+CT, Van Leer]                     # Tags, any number
 pin:        false                      # Should this post be pinned?
 toc:        true                       # Table of Contents?
 math:       false                      # Does this post contain math?
