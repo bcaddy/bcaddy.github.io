@@ -36,11 +36,10 @@ at it.
 
 ## Git Hash & Compile Time Macros
 
-I'm working on making it so that when Cholla knows what commit hash it was
+I made it so that when Cholla knows what commit hash it was
 compiled at and which preprocessor macros were passed at compile time with the
 `-D` argument. I've got it working and writing that information out to the
-terminal and log files when Cholla runs but I still need to add it to the ASCII
-and HDF5 output.
+terminal, log files, ASCII, and HDF5 output. [PR #138](https://github.com/cholla-hydro/cholla/pull/138)
 
 ## Other
 
