@@ -24,12 +24,13 @@ practice and figuring out any kinks before I add the VL+CT integrator to
 Overall the algorithm is very similar to the Van Leer algorithm, though with
 significant new additions for Constrained Transport(CT). CT treats the magnetic
 field as surface, rather than volume, averaged quantities then updates using
-edge averaged electric fields. By updating with electric fields you
+edge averaged EMF (ElectroMotive Force). By updating with EMF you
 automatically fulfill the divergence free condition for magnetic fields so no
 magnetic monopoles will appear (assuming that the initial conditions don't
 contain any).
 
 ## Glossary of Symbols
+
 - \\( \vec{U} \\), Vector of conserved variables. Note that the magnetic field
   is the face averaged value at the \\( i-1/2 \\) interface whereas all the
   other values are volume averages
@@ -45,26 +46,26 @@ contain any).
 - \\(p  \\), Pressure
 - \\(E \\), Energy
 - \\(v  \\), Velocity
-- \\(B \\), Magnetic Field
+- \\(B \\), Magnetic Flux Density, also called just the Magnetic Field
 - \\(p_T \\), Total pressure
-- \\( \mathcal{E} \\), the electric field
-- \\( C_{CFL} \\), the CFL number, must be less than 1/2
-
-
-
+- \\( \mathcal{E} \\), the EMF (ElectroMotive Force), in this application it can
+  be used interchangably with the magnetic fields. See the section on the CT
+  fields for details
+- \\( C_{CFL} \\), the CFL number, must be less than \\(1/2\\)
 
 ## Glossary of New Equations
+
 MHD comes along with many modifications to the various basic equations that
 we're used to; new terms in the pressure and energy equations, new wave speeds,
 new eigenvalues etc. The glossary can be found in my post on the [HLLD
 Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm%})
 
-
-
 # Algorithm
+
 Our goal is to choose the correct HLLD flux depending on the interface states.
 
 ## 1. Compute the Time Step
+
 The first thing we need to do is compute the time step which is done with this
 equation
 
@@ -89,10 +90,8 @@ $$
     \end{aligned}
 $$
 
-
-
-
 ## 2. First Riemann Solve
+
 The next step is the solve the Riemann problem with the first order variables.
 This is identical to the standard Van Leer integrator for the hydrodynamic
 variables; the magnetic field is a bit more complicated since the magnetic field
@@ -102,15 +101,41 @@ directly. The transverse fields (i.e. the fields parallel to the interface) are
 reconstructed using a straight average, which has already been done in step 1.
 
 The magnetic fluxes that are returned by the Riemann solver are the face
-centered electric fields (section 5.3 of Stone et. al 2008)
+centered EMFs (section 5.3 of Stone et. al 2008) however it's not trivial to
+convert them. According to the Athena source code this is the correct way to
+convert them into EMFs.
 
-## 3. Compute the Constrained Transport Electric Fields
-Now we need to calculate the CT electric fields. These fields are *line
-averaged* along each cell edge. These line averaged fields are constructed by a
-complicated average of the face centered electric fields and their slopes which
-are given by the flux of the magnetic field from the Riemann solve in the
-previous step; i.e. the magnetic flux at a given interface is the electric field
-at that interface.
+*Note that the directions used here are relative to the internal workings of the
+HLLD solver. Since the HLLD solver is inherently 1D we run it three times, once
+for each direction. So in the case where the solver is running in the Y
+direction the solver's Y field is actually the Z field and the solvers Z field
+is actually the X field, cyclically extended for the Z direction*
+
+| HLLD solve Direction | Equation for Magnetic Flux | Eqn. as a Cross Product    | EMF                 |
+|----------------------|----------------------------|----------------------------|---------------------|
+| \\( X \\)            | \\( V_x B_y - B_x V_y \\)  | \\(  (V \times B)_z \\) | \\( -\varepsilon_z \\) |
+| \\( X \\)            | \\( V_x B_z - B_x V_z \\)  | \\( -(V \times B)_y \\) | \\(  \varepsilon_y \\) |
+| \\( Y \\)            | \\( V_x B_y - B_x V_y \\)  | \\(  (V \times B)_z \\) | \\( -\varepsilon_x \\) |
+| \\( Y \\)            | \\( V_x B_z - B_x V_z \\)  | \\( -(V \times B)_y \\) | \\(  \varepsilon_z \\) |
+| \\( Z \\)            | \\( V_x B_y - B_x V_y \\)  | \\(  (V \times B)_z \\) | \\( -\varepsilon_y \\) |
+| \\( Z \\)            | \\( V_x B_z - B_x V_z \\)  | \\( -(V \times B)_y \\) | \\(  \varepsilon_x \\) |
+
+## 3. Compute the Constrained Transport EMF
+
+Now we need to calculate the CT EMF. These fields are *line averaged* along each
+cell edge. These line averaged fields are constructed by a complicated average
+of the face centered EMF and their slopes which are given by the flux of the
+magnetic field from the Riemann solve in the previous step; i.e. the magnetic
+flux at a given interface is the EMF at that interface.
+
+Technically CT uses the magnetic flux as the conservative variable and EMF to
+update it. However, those values only differ from the magnetic flux density
+(i.e. the magnetic field) and the electric field respectively by factors of unit
+length we can treat them as the same thing, the same way we treat density and
+mass as the same for the hydro fields (Stone et al. 2008). As such, just like
+Athena, we use the magnetic field and electric field to evolve the grid.
+Electric fields have the proper units to evolve the magnetic flux density, \\( B
+\\) whereas EMF has the proper units to evolve the magnetic flux.
 
 On any face there are two non-zero electric fields; both transverse to the face.
 The most important thing to note is that the component that is used to calculate
@@ -178,8 +203,8 @@ reference state and an edge state.
 
 ![Stone et al. 2008 Fig. 5](/assets/img/2021-post-assets/01-January/Stone-et-al.-2008-fig-5.png)
 
-
 ## 4. Perform the Half Time-step Update
+
 Update all the hydro variables using this equation
 
 $$
@@ -217,8 +242,8 @@ $$
     \end{aligned}
 $$
 
-
 ## 5. Compute Cell Centered Magnetic Fields
+
 Average the values on the faces to compute the cell centered magnetic fields.
 We'll need this for the second order reconstruction.
 
@@ -231,6 +256,7 @@ $$
 $$
 
 ## 6. Half Time-step Second Order Reconstruction
+
 Now we need to perform the high order reconstruction. I will show the algorithm
 for a second order (Piecewise Linear Method, PLM) reconstruction though any
 method should work. Note that at a given face only the transverse components of
@@ -255,16 +281,17 @@ already given at the face.
     slope.
 
 ## 7. Second Riemann Solve
+
 Solve the Riemann problem again with the half time step MHD interface states
 from step 6.
 
-
 ## 8. Compute the Constrained Transport Electric Fields
+
 Repeat step 3 but using the fluxes from the second Riemann solve and the half
 time step MHD variables.
 
-
 ## 9. Perform the Full Time-step Update
+
 Update all the hydro variables using the below equations. Note that this is
 almost identical to step 3 except we're updating the \\( t = n \\) state with
 the \\( t=n+1/2 \\) fluxes/CT fields instead of the \\( t=n \\) fluxes/CT
@@ -306,7 +333,6 @@ $$
 $$
 
 ## 10. Increment the Time by \\( \delta t \\)
-
 
 And that's it! Just loop this until you've reached or exceed max time and you're
 done!
