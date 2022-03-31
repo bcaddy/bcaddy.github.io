@@ -196,12 +196,14 @@ $$
 $$
 
 The easiest way to see how to compute these derivatives is with the following
-diagram from [Stone et al.
+diagrams based off of Figure 5 in [Stone et al.
 2008](https://iopscience.iop.org/article/10.1086/588755/pdf). Each edge requires
 4 derivatives (in 3D anyway) and they are computed as differences between a
 reference state and an edge state.
 
-![Stone et al. 2008 Fig. 5](/assets/img/2021-post-assets/01-January/Stone-et-al.-2008-fig-5.png)
+![CT electric fields diagrams. X-direction](/assets/img/2021-post-assets/01-January/CT-edge-field-figures-X.pdf)
+![CT electric fields diagrams. Y-direction](/assets/img/2021-post-assets/01-January/CT-edge-field-figures-Y.pdf)
+![CT electric fields diagrams. Z-direction](/assets/img/2021-post-assets/01-January/CT-edge-field-figures-Z.pdf)
 
 ## 4. Perform the Half Time-step Update
 
