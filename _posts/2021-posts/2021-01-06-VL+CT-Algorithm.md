@@ -239,8 +239,8 @@ $$
 $$
     \begin{aligned}
         B^{n+1/2}_{z,i,j,k-1/2} = B^{n}_{z,i-1/2,j,k}
-        - \frac{\delta t}{\delta x} \left( \mathcal{E}^n_{y,i+1/2,j,k-1/2} - \mathcal{E}^n_{y,i-1/2,j,k-1/2} \right) \\
         + \frac{\delta t}{\delta y} \left( \mathcal{E}^n_{x,i,j+1/2,k-1/2} - \mathcal{E}^n_{x,i,j-1/2,k-1/2} \right).
+        - \frac{\delta t}{\delta x} \left( \mathcal{E}^n_{y,i+1/2,j,k-1/2} - \mathcal{E}^n_{y,i-1/2,j,k-1/2} \right) \\
     \end{aligned}
 $$
 
