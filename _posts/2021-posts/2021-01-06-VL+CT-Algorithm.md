@@ -223,8 +223,8 @@ Update the magnetic field using these equations
 $$
     \begin{aligned}
         B^{n+1/2}_{x,i-1/2,j,k} = B^{n}_{x,i-1/2,j,k}
-        - \frac{\delta t}{\delta y} \left( \mathcal{E}^n_{z,i-1/2,j+1/2,k} - \mathcal{E}^n_{z,i-1/2,j-1/2,k} \right) \\
         + \frac{\delta t}{\delta z} \left( \mathcal{E}^n_{y,i-1/2,j,k+1/2} - \mathcal{E}^n_{y,i-1/2,j,k-1/2} \right)
+        - \frac{\delta t}{\delta y} \left( \mathcal{E}^n_{z,i-1/2,j+1/2,k} - \mathcal{E}^n_{z,i-1/2,j-1/2,k} \right) \\
     \end{aligned}
 $$
 
