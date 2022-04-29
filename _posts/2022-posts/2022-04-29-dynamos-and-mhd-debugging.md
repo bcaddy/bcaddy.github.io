@@ -60,3 +60,14 @@ that it returns to it's original shape with an increased strength.
   Gilbert](http://empslocal.ex.ac.uk/people/staff/adgilber/dynamoreview.pdf)
 - [*Mean Field Theory Dynamo
   Solutions*](http://web.gps.caltech.edu/classes/ge131/notes2016/Ch22.pdf)
+
+## Other
+
+I got interested in Rust as an HPC programming language so I did some poking
+around. Looks interesting but we'll have to see how support goes in the next
+couple of years. If I was working on a high performance single node project I'd
+probably try it out; I'm not sure if it would work well yet for massively
+parallel systems though. Check out [Costanzo et al.
+2021](http://arxiv.org/abs/2107.11912) for an interesting performance
+comparison. Rust looks like it's currently losing but other benchmarks show it
+being faster so it might just be a matter of which benchmark you pick.
