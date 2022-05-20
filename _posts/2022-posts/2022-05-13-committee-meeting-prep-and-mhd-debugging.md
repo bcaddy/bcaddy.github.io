@@ -13,7 +13,7 @@ math:       false                      # Does this post contain math?
 
 ## Second Committee Meeting Prep
 
-I made the presentation, practiced it with observers, and iterated it from there.\
+I made the presentation, practiced it with observers, and iterated it from there.
 
 ## MHD Debugging
 
