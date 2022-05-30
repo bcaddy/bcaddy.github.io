@@ -4,7 +4,7 @@ author:     Robert Caddy               # Author Name
 date:       2022-05-30 15:46:32 -0400  # Date
 categories: [Poster, Conference]     # Catagories, no more than 2
 tags:       [HPC, Summer School, International, IHPCSS]                     # Tags, any number
-pin:        false                      # Should this post be pinned?
+pin:        true                       # Should this post be pinned?
 toc:        true                       # Table of Contents?
 math:       false                      # Does this post contain math?
 #image:      /assets/img/#            # Header image path
