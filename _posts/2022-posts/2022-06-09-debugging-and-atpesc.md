@@ -20,7 +20,20 @@ it's only when magnetic fields are on and the HLLD solver has been fully tested
 the bug is likely in the CT electric fields kernel, which isn't a suprise due to
 its complexity. I'm working on tracking that bug down.
 
-I also modified the 3D constant test case to include magnetic fields and tested that it's actually constant using Athena++. The MHD constant test case is the same as the hydro one but with \\( \vec{B} = \left[ 1, 2, 3 \right] \\).
+I also modified the 3D constant test case to include magnetic fields and tested
+that it's actually constant using Athena++. The MHD constant test case is the
+same as the hydro one but with \\( \vec{B} = \left[ 1e-5, 2e-5, 3e-5 \right] \\).
+
+I found a second bug that now makes the constant MHD case work. The [VL+CT
+Algorithm]({% post_url 2021-posts/2021-01-06-VL+CT-Algorithm%}) requires at
+least 2 fully working ghost cells that have magnetic fields on both sides. That
+requires that we have at least 3 ghost cells in Cholla so that both edges have
+two fully working ghost cells. I added some logic to double check and set that
+and now the constant MHD case works. Compared to Athena++ it computes exactly
+the same time step and runs in exactly the same number of time steps. I then
+tested the Brio & Wu shock tube and that isn't working yet. However, it looks
+like that is mostly due to a large oscillation in the \\( B_z \\) field so
+hopefully that is a simple sign error that I need to track down.
 
 ## Argonne Training Program for Extreme Scale Computing (ATPESC)
 
