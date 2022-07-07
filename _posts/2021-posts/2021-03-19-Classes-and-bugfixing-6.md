@@ -123,7 +123,7 @@ $$
 \\( \vec{\bar{U}} \\) for this wave,
 
 $$
-    \vec{R}_{\pm c_a} = \frac{1}{2}
+    \vec{R}_{\pm c_c} = \frac{1}{2}
         \begin{bmatrix}
             2 \\
             2 \\
