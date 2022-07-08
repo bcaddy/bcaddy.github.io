@@ -119,6 +119,8 @@ assets:
      # only works if `assets.self_host.enabled` is 'true'
      env:          # [development|production]
 
+pwa:
+  enabled: true   # the option for PWA feature
 
 paginate: 10
 
@@ -187,6 +189,7 @@ exclude:
   - '*.gemspec'
   - tools
   - README.md
+  - CHANGELOG.md
   - LICENSE
   - gulpfile.js
   - node_modules
