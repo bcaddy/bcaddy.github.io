@@ -2,7 +2,7 @@
 title:      MHD Riemann Problems            # Title
 author:     Robert Caddy               # Author Name
 date:       2021-11-19 10:10:09 -0400  # Date
-categories: [MHD]     # Catagories, no more than 2
+categories: [MHD, Guide]     # Catagories, no more than 2
 tags:       [Riemann Problem, Shock Tube, HLLD,]       # Tags, any number
 pin:        false                      # Should this post be pinned?
 toc:        true                       # Table of Contents?

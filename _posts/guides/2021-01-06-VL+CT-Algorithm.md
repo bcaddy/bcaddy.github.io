@@ -2,8 +2,8 @@
 title:      VL+CT Algorithm            # Title
 author:     Robert Caddy               # Author Name
 date:       2021-01-06 15:44:00 -0400   # Date
-categories: [MHD, Recontruction]       # Catagories, no more than 2
-tags:       [MHD, Hydro, Computational Methods, Numerical Methods, Riemann Solver, Van Leer, VL+CT]
+categories: [MHD, Guide]       # Catagories, no more than 2
+tags:       [MHD, Hydro, Computational Methods, Numerical Methods, Riemann Solver, Van Leer, VL+CT, Reconstruction]
 pin:        false                      # Should this post be pinned?
 toc:        true                       # Table of Contents?
 math:       true                       # Does this post contain math?
