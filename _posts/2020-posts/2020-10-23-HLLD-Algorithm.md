@@ -31,6 +31,7 @@ them. Note that the HLLD Riemann solver does not include all 7 MHD
 waves; It ignores the slow magnetosonic wave.
 
 ## Glossary of Symbols
+
 Note: since magnetic fields are inherently 3D due to the use of the outproduct even the 1D algorithm I write out here uses all three dimensions. The first dimension is always in the \\( x \\) direction however, again because of the cross product, the active elements of the magnetic field are in the \\( y \\) and \\( z \\) directions.
 
 - \\(k \\), Subscript to indicate left or right. i.e. \\( k = L \ \text{or}\ R \\)
@@ -52,8 +53,8 @@ Note: since magnetic fields are inherently 3D due to the use of the outproduct e
 - \\(c \\), Sound speed
 - \\(\vec{U}  \\), Vector of conserved variables
 
-
 ## Glossary of New Equations
+
 MHD comes along with many modifications to the various basic equations that we're used to; new terms in the pressure and energy equations, new wave speeds, new eigenvalues etc. I summarize the ones I plan to use here.
 
 ### Conservative Variable Vector and Flux
@@ -84,7 +85,7 @@ $$
          \end{bmatrix}
 $$
 
-### Eigenvalues:
+### Eigenvalues
 
 $$
     \lambda_{2,6} = v_x \mp c_a, \;
@@ -93,13 +94,13 @@ $$
     \lambda_{4} = v_x
 $$
 
-### Alfvên Wave Speed:
+### Alfvên Wave Speed
 
 $$
     c_a = \frac{\mid B_x \mid}{\sqrt{\rho}}
 $$
 
-### Fast & Slow Magnetosonic Wavespeeds:
+### Fast & Slow Magnetosonic Wavespeeds
 
 $$
     c_{f,s} = \sqrt{\frac
@@ -107,7 +108,7 @@ $$
     {2\rho}}
 $$
 
-### Pressure:
+### Pressure
 
 $$
     p = \left( \gamma - 1 \right)
@@ -118,14 +119,14 @@ $$
     p_T = p_{Total} = p + \frac{1}{2} \mid \vec{B} \mid ^2
 $$
 
-### Energy:
+### Energy
 
 $$
     E = \frac{p}{\gamma - 1} + \frac{1}{2}\left( \rho \mid \vec{v} \mid ^2 + \mid \vec{B} \mid ^2\right)
       = \frac{p_T - \frac{1}{2}\mid \vec{B} \mid^2 }{\gamma - 1} + \frac{1}{2}\left( \rho \mid \vec{v} \mid ^2 + \mid \vec{B} \mid ^2\right)
 $$
 
-### Which Variables are the Same Between States:
+### Which Variables are the Same Between States
 
 $$
     S_M = v_{x,L}^* = v_{x,L}^{**} = v_{x,R}^* = v_{x,R}^{**}
@@ -147,15 +148,17 @@ $$
     \vec{B}_R^{**} = \vec{B}_L^{**} = \vec{B}^{**}\; \text{if}\; B_x = 0
 $$
 
-
 # Algorithm
+
 Our goal is to choose the correct HLLD flux depending on the interface states.
 
 ## 1. Compute Acoustic & Contact Wave Speeds
+
 First we need to compute \\\( S_L, S_L^\*, S_M, S_R^\*, \text{and} S_R \\) using the below
 equations.
 
 ### Computing \\\( S_L \\) and \\( S_R \\)
+
 We can use either of the below approximations for \\( S_L \text{and} S_R \\)
 (there are other options as well, these were just the two given in [Miyoshi &
 Kusano
@@ -183,6 +186,7 @@ $$
 $$
 
 ### Computing \\\( S_L^\* \\) and \\( S_R^\* \\)
+
 *Note that the second term is the Alfvên speed in the star state.*
 
 $$
@@ -207,8 +211,8 @@ $$
     {\rho_R \left( S_R - v_{x,R}\right) - \rho_L \left( S_L - v_{x,L}\right)}
 $$
 
-
 ## 2. Determine Which State We're In
+
 Use the equation below with the wave speeds to determine which state we're in.
 If we're in a non-star state go to step 3a, for star states go to step 3b, and
 for double star states go to step 3c.
@@ -237,10 +241,10 @@ $$
 
 $$
 
-
 ## 3. Compute & Return the Fluxes
 
 ### 3a. \\( F_L \\) or \\( F_R \\) State
+
 This is the region outside of either magnetosonic wave. The flux is easy, simply
 compute fluxes with the below equation and return.
 
@@ -257,7 +261,8 @@ $$
          \end{bmatrix}
 $$
 
-### 3b. \\( F_L^* \\) or \\( F_R^* \\) State
+### 3b. \\( F_L^*\\) or \\(F_R^* \\) State
+
 This is the region between the fast magnetosonic waves and the Alfvên waves.
 These fluxes are more complicated and require the use of the fluxes from step 3a
 as well. The algorithm is exactly the same for the left and right star states so
@@ -333,6 +338,7 @@ $$
 Note that the denominators are the same
 
 ### 3c. \\( F_L^{\*\*} \\) or \\( F_R^{\*\*} \\) State
+
 This is the region between the Alfvên waves and the contact discontinuity
 (entropy wave). These fluxes require the fluxes from step 3a and 3b. The
 algorithm is exactly the same for the left and right star states so the
@@ -398,8 +404,8 @@ $$
                     \text{sign}\left( B_x \right)
 $$
 
-
 # Conclusion
+
 And that's it. We're done! As you can see the HLLD solver is significantly more
 complex than the HLLC solver to account for the extra waves. Note that many of
 the star state primitive variables are used in a bunch of different places so
