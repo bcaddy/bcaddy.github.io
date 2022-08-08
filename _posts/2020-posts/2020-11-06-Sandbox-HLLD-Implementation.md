@@ -22,6 +22,6 @@ Building on the work from [last week]({% post_url 2020-posts/2020-10-30-MHD-Impl
 ## Useful links
 Original HLLD paper: [Miyoshi & Kusano 2005](https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub)
 
-Blog post on the HLLD Algorithm: [HLLD Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm%})
+Blog post on the HLLD Algorithm: [HLLD Algorithm]({% post_url guides/2020-10-23-HLLD-Algorithm%})
 
 Original VL+CT paper: [Stone & Gardiner 2009](https://www.sciencedirect.com/science/article/abs/pii/S1384107608000754?via%3Dihub)

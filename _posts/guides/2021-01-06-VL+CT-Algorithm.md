@@ -58,7 +58,7 @@ contain any).
 MHD comes along with many modifications to the various basic equations that
 we're used to; new terms in the pressure and energy equations, new wave speeds,
 new eigenvalues etc. The glossary can be found in my post on the [HLLD
-Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm%})
+Algorithm]({% post_url guides/2020-10-23-HLLD-Algorithm%})
 
 # Algorithm
 

@@ -23,7 +23,7 @@ I'm starting on writing an HLLD Riemann Solver this week. I've been basing my
 work on [Miyoshi & Kusano
 2005](https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub)
 which is the original paper where the HLLD Riemann solver was introduced. See my
-post on the [HLLD Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm
+post on the [HLLD Algorithm]({% post_url guides/2020-10-23-HLLD-Algorithm
 %}) for the details. I plan to start implementing it into my [1D hydro
 code](https://github.com/bcaddy/hydro-sandbox) next week and hopefully will have
 a fully working 1D MHD code in the next few weeks.

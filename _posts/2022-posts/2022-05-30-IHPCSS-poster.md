@@ -4,7 +4,7 @@ author:     Robert Caddy               # Author Name
 date:       2022-05-30 15:46:32 -0400  # Date
 categories: [Poster, Conference]     # Catagories, no more than 2
 tags:       [HPC, Summer School, International, IHPCSS]                     # Tags, any number
-pin:        true                       # Should this post be pinned?
+pin:        false                       # Should this post be pinned?
 toc:        true                       # Table of Contents?
 math:       false                      # Does this post contain math?
 #image:      /assets/img/#            # Header image path
@@ -24,8 +24,8 @@ repo](https://github.com/cholla-hydro/cholla) or the original [Cholla
 paper](https://iopscience.iop.org/article/10.1088/0067-0049/217/2/24). If you're
 interested in a break down of the algorithm I'm implenting for MHD in Cholla you
 can check out my page on the [VL+CT Algorithm]({% post_url
-2021-posts/2021-01-06-VL+CT-Algorithm%}) for the integrator or the [HLLD
-Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm%}) for the MHD
+guides/2021-01-06-VL+CT-Algorithm%}) for the integrator or the [HLLD
+Algorithm]({% post_url guides/2020-10-23-HLLD-Algorithm%}) for the MHD
 Riemann Solver.
 
 <div class='embed-responsive' style='padding-bottom:150%'>

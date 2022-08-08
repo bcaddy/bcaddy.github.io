@@ -25,7 +25,7 @@ that it's actually constant using Athena++. The MHD constant test case is the
 same as the hydro one but with \\( \vec{B} = \left[ 1e-5, 2e-5, 3e-5 \right] \\).
 
 I found a second bug that now makes the constant MHD case work. The [VL+CT
-Algorithm]({% post_url 2021-posts/2021-01-06-VL+CT-Algorithm%}) requires at
+Algorithm]({% post_url guides/2021-01-06-VL+CT-Algorithm%}) requires at
 least 2 fully working ghost cells that have magnetic fields on both sides. That
 requires that we have at least 3 ghost cells in Cholla so that both edges have
 two fully working ghost cells. I added some logic to double check and set that

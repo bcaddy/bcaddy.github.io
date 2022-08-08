@@ -78,5 +78,5 @@ kernel.
 
 ## Links
 
-- [VL+CT Algorithm]({% post_url 2021-posts/2021-01-06-VL+CT-Algorithm%})
-- [HLLD Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm%})
+- [VL+CT Algorithm]({% post_url guides/2021-01-06-VL+CT-Algorithm%})
+- [HLLD Algorithm]({% post_url guides/2020-10-23-HLLD-Algorithm%})

@@ -32,7 +32,7 @@ Athena[^1] and built a program to call it with different values and print the
 results at full precision. To find reasonable inputs I decided to use values
 from various MHD Riemann problems and so researched and wrote a blog post on
 them:
-[MHD Riemann Problems]({% post_url 2021-posts/2021-11-19-MHD-Riemann-Problems %}).
+[MHD Riemann Problems]({% post_url guides/2021-11-19-MHD-Riemann-Problems %}).
 Next I plan to use Athena++ to simulate all the Riemann problems then use
 L/R values that span each wave as my test cases. The extracted HLLD solver,
 results from Athena++, and analysis notebook can all be found on in my

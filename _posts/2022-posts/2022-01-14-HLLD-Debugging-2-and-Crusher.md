@@ -54,4 +54,4 @@ billionth of a percent.
 
 Original HLLD paper: [Miyoshi & Kusano 2005](https://www.sciencedirect.com/science/article/pii/S0021999105001142?via%3Dihub)
 
-Blog post on the HLLD Algorithm: [HLLD Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm%})
+Blog post on the HLLD Algorithm: [HLLD Algorithm]({% post_url guides/2020-10-23-HLLD-Algorithm%})

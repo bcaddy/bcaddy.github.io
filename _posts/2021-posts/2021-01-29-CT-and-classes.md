@@ -48,6 +48,6 @@ and debugging.
 
 ## Useful links
 
-Blog post on the VL+CT Algorithm: [VL+CT Algorithm]({% post_url 2021-posts/2021-01-06-VL+CT-Algorithm%})
+Blog post on the VL+CT Algorithm: [VL+CT Algorithm]({% post_url guides/2021-01-06-VL+CT-Algorithm%})
 
 Original VL+CT paper: [Stone & Gardiner 2009](https://www.sciencedirect.com/science/article/abs/pii/S1384107608000754?via%3Dihub)

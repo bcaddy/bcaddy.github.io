@@ -36,6 +36,6 @@ Currently known unfixed bugs:
 - Tried to get VS Code's debugger intergration to connect to Pitt CRC compute nodes. TL;DR is that it's doable but more effort than it's worth at the moment. Checkout [this GitHub issue](https://github.com/microsoft/vscode-remote-release/issues/1722#issuecomment-667733248) for more info.
 
 ## Useful links
-Blog post on the VL+CT Algorithm: [VL+CT Algorithm]({% post_url 2021-posts/2021-01-06-VL+CT-Algorithm%})
+Blog post on the VL+CT Algorithm: [VL+CT Algorithm]({% post_url guides/2021-01-06-VL+CT-Algorithm%})
 
 Original VL+CT paper: [Stone & Gardiner 2009](https://www.sciencedirect.com/science/article/abs/pii/S1384107608000754?via%3Dihub)

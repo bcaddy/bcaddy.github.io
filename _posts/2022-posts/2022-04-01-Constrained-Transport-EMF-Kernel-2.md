@@ -24,7 +24,7 @@ I also recreated some figures from
 [Stone et al. 2008](https://iopscience.iop.org/article/10.1086/588755/pdf)
 to help me visualize the CT electric fields and their slopes. Those figures can
 be found in section 3 of my
-[VL+CT Algorithm]({% post_url 2021-posts/2021-01-06-VL+CT-Algorithm%})
+[VL+CT Algorithm]({% post_url guides/2021-01-06-VL+CT-Algorithm%})
 blog post.
 
 ## Other
@@ -33,5 +33,5 @@ blog post.
 
 ## Links
 
-- [VL+CT Algorithm]({% post_url 2021-posts/2021-01-06-VL+CT-Algorithm%})
-- [HLLD Algorithm]({% post_url 2020-posts/2020-10-23-HLLD-Algorithm%})
+- [VL+CT Algorithm]({% post_url guides/2021-01-06-VL+CT-Algorithm%})
+- [HLLD Algorithm]({% post_url guides/2020-10-23-HLLD-Algorithm%})
