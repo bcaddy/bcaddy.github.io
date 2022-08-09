@@ -268,6 +268,7 @@ off of `featureBranch`
 ### Git Reset
 
 *[detailed guide](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)*
+*[--soft vs. --mixed vs --hard guide](https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard)*
 
 - `git reset`, removes all staged files from staging already
 - `git reset --hard`, deletes all uncommitted changes to tracked files
@@ -277,12 +278,15 @@ off of `featureBranch`
   a specific SHA. This is often a more dangerous version of `git revert` or
   `git cherry-pick` and unless you know what you're doing should be avoided.
   DON'T USE IT ON SHARED BRANCHES
-  - If used with `--hard` it will orphan all commits after that and git will
-    garbage collect them eventually. They can be recovered with `git reflog`
-    before garbage collection
-  branch after the SHA chosen. THIS IS DANGEROUS AND DESTRUCTIVE
-  - If used with `--mixed` (default behavior)
-  - If used with `--soft`
+  - If used with `--soft` it will delete all the commits after `SHA` but NOT
+    change the files that were committed and it will stage them for a commit.
+  - If used with `--mixed` (default behavior) it will delete all the commits
+    after `SHA` but NOT change the files that were committed. The changes will
+    not be staged for commiting
+  - If used with `--hard` - If used with `--hard` it will delete all the commits
+    after `SHA` AND delete all changes after `SHA`. The changes *might* be
+    recoverable with `git reflog` but don't count on it. Be very careful with
+    `--hard`.
 
 ### Git Revert
 
