@@ -99,10 +99,12 @@ this is entirely optional.
 
 ## 3. Committing & Branches
 
+### Committing
+
 Git is built around "committing" code and changes. Any time you change
 something, add a new file, etc. you can then commit that file/change to add it
 to repository history. Choose which things you want to commit you must first run
-`git add <files>` to prepare whichever files you want for committing then commit
+`git add <files/pattern>` to prepare whichever files you want for committing then commit
 those files with `git commit -m "message"` or `git commit`.
 
 ### Git Message Structure
@@ -114,7 +116,15 @@ guide](https://medium.com/@corrodedlotus/which-tense-should-be-used-on-a-git-com
 on general structure and ideas for writing good commit messages. Personally I
 make sure that each commit title answers the questions "If applied, this commit
 will...", as long as you're consistent with your team, clear, and concise it
-doesn't really matter what you choose.
+doesn't really matter what you choose. You can setup a commit message template
+by adding the following lines to your `.gitconfig` file.
+
+```
+[commit]
+    template = /path/to/template/git-message-template.txt
+```
+
+My commit message template
 
 ```
 # You MUST limit the title to 50 characters and lines to 72 characters
