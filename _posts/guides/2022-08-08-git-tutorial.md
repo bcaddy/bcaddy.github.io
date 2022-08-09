@@ -213,12 +213,23 @@ logs, OS files, etc.
 
 ## 6. Workflow
 
-### Workflow: or Always Squash and Rebase your Git Commits
+Once you've finished the feature, bug fix, etc. you might find that you have a
+lot of commits at an intermediate state. Often these intermediate states are
+poorly designed, broken, or bad in some other way. Ideally we would like to
+reduce all our work to one, or a couple, high quality commits before merging
+them. Here's two options on how to do that; you should always backup your branch
+before trying either of these methods
+
+### Option 1: Safely Squash and Rebase your Git Commits
 
 *This section is based on the post
 [Always Squash and Rebase your Git Commits](https://blog.carbonfive.com/always-squash-and-rebase-your-git-commits/)
 by Anna Sherman. It's written in more detail there and I highly
 recommend reading it*
+
+This method works best for a small (<50) commits where you care about the
+intermediate state and commit messages. It can be more complex but lets you walk
+through your intermediate commits one-by-one to fix any conflicts.
 
 ```bash
 # Pull current root branch
@@ -262,6 +273,57 @@ Squashing to a single commit isn't required, but maybe squash down to a handful
 and make sure that each commit builds and passes tests. Remember you can have
 multiple layers of this: `featureBranch` off of `main` and `subFeatureBranch`
 off of `featureBranch`
+
+### Option 2: The Nuclear Option
+
+This is the nuclear approach for when you do not care about intermediate state.
+This is often nice for when you have hundreds of commits and you don't want to
+deal with any potential merge conflicts between them and instead just use the
+latest state. You will destroy all new commits since you branched and just keep
+the changed files. If you want to know what the commit messages said you will
+need to get them manually *before* starting this process. Please backup your
+branch before doing this.
+
+```bash
+# Pull current root branch
+git pull main
+# Create and checkout a new branch, Note that you can also checkout specific commits
+git checkout -b featureBranch
+# Set that branch upstream
+git push origin featureBranch --set-upstream
+
+# do stuff, make commits, etc
+
+# Reset
+# `git branch --show-current` returns the name of the current branch,
+#  "featureBranch" in this case.
+# `git merge-base <commit 1> <commit 2>` returns the SHA to the most recent
+# common ancestor.
+#
+# Overall this command takes us back to the same state as when `featureBranch`
+# branched off of `main` but with all the changes since then ready to stage and
+# commit
+git reset $(git merge-base main $(git branch --show-current))
+
+# Check that your main branch is up to date
+git checkout main
+git pull
+
+# Rebase on to main branch
+git checkout featureBranch
+git rebase main
+
+# Update remote branch, NOTE THE DANGERS OF force push
+git push origin featureBranch --force
+# force pull
+# git fetch --all
+# git reset --hard origin/<branchName>
+
+# Merge featureBranch into main
+git checkout main
+git merge featureBranch
+git push
+```
 
 ## 7. Assorted Useful Git Commands
 
