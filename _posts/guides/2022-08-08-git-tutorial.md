@@ -220,10 +220,6 @@ reduce all our work to one, or a couple, high quality commits before merging
 them. Here's two options on how to do that; you should always backup your branch
 before trying either of these methods.
 
-If you want to experiment with these two options you can initialize a git repo
-and create several dummy files to commit with `for i in {1..5}; do touch $i.md;
-done`
-
 ### Option 1: Safely Squash and Rebase your Git Commits
 
 *This section is based on the post
