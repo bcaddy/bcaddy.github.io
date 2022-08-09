@@ -218,7 +218,11 @@ lot of commits at an intermediate state. Often these intermediate states are
 poorly designed, broken, or bad in some other way. Ideally we would like to
 reduce all our work to one, or a couple, high quality commits before merging
 them. Here's two options on how to do that; you should always backup your branch
-before trying either of these methods
+before trying either of these methods.
+
+If you want to experiment with these two options you can initialize a git repo
+and create several dummy files to commit with `for i in {1..5}; do touch $i.md;
+done`
 
 ### Option 1: Safely Squash and Rebase your Git Commits
 
@@ -330,7 +334,13 @@ git push
 ### Git Reset
 
 *[detailed guide](https://www.atlassian.com/git/tutorials/undoing-changes/git-reset)*
+
 *[--soft vs. --mixed vs --hard guide](https://stackoverflow.com/questions/3528245/whats-the-difference-between-git-reset-mixed-soft-and-hard)*
+
+`git reset` is an incredibly powerful and useful tool and you should know how to
+use it. However, it’s less a gun that you can shoot yourself in the foot with
+and more of a hand-grenade vending machine so make sure to backup your branch
+before using it.
 
 - `git reset`, removes all staged files from staging already
 - `git reset --hard`, deletes all uncommitted changes to tracked files
