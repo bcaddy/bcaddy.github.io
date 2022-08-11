@@ -111,13 +111,19 @@ those files with `git commit -m "message"` or `git commit`.
 
 There are some best practices for git commit messages. GitHub gives some line
 length limitations for optimal display which are noted in the template message
-below. [Here's a good
-guide](https://medium.com/@corrodedlotus/which-tense-should-be-used-on-a-git-commit-message-121cb641134b)
-on general structure and ideas for writing good commit messages. Personally I
-make sure that each commit title answers the questions "If applied, this commit
-will...", as long as you're consistent with your team, clear, and concise it
-doesn't really matter what you choose. You can setup a commit message template
-by adding the following lines to your `.gitconfig` file.
+below.
+[Here's a good guide](https://medium.com/@corrodedlotus/which-tense-should-be-used-on-a-git-commit-message-121cb641134b)
+on general structure and ideas for writing good commit messages. There are also
+some good more automated tools such as
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+Personally I make sure that each commit title answers the questions "If applied,
+this commit will...", as long as you're consistent with your team, clear, and
+concise it doesn't really matter what you choose. I am looking into using
+[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) though.
+
+You can setup a commit message
+template by adding the following lines to your `.gitconfig` file.
 
 ```
 [commit]
