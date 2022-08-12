@@ -160,6 +160,8 @@ for older commits is doable but much more complex.
 
 Git branches are the main organizational tool for git and their uses are many and varied. Branches are to complex to be simply summarized in a few lines in this document so I'll refer you to the [Atlassion documentation on branches](https://www.atlassian.com/git/tutorials/using-branches) and provide a [Git Branches cheatsheet](https://devhints.io/git-branch) that I use regularly.
 
+Branches should generally be short lived: make a branch, add a small feature, merge the branch, then get rid of it. Long lived branches can be difficult to rebase. Once a feature branch has been merged it shouldn't be used again. Using an already merged branch can be complex
+
 ## 4. Repository History & Introspection
 
 ### Git Status
@@ -320,6 +322,8 @@ git push origin featureBranch --set-upstream
 # branched off of `main` but with all the changes since then ready to stage and
 # commit
 git reset $(git merge-base main $(git branch --show-current))
+git add <whatever you want to add>
+git commit
 
 # Check that your main branch is up to date
 git checkout main
