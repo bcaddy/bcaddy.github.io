@@ -22,5 +22,8 @@ See the [Arm Forge User Guide](https://developer.arm.com/documentation/#f[naviga
   - `((@global TYPE *)(VARIABLE_NAME)` to get the proper pointer
   - `((@global TYPE *)(VARIABLE_NAME)[IDX]` to get the value at `IDX`
   - `((@global TYPE *)(VARIABLE_NAME)[IDX]@N` to get `N` values starting at `IDX`
-- The expressions panel; can also be used for any other debugging or math
+- The expressions panel: can also be used for any other debugging or math
   expression you want
+- Array Viewer: Any expression can go in the brackets and be displayed in 2D.
+  The correct indexing scheme for Cholla is `xid + yid*nx + zid*nx*ny +
+  field*n_cells`.
