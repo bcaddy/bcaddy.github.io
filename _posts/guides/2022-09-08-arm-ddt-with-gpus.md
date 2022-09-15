@@ -27,3 +27,21 @@ See the [Arm Forge User Guide](https://developer.arm.com/documentation/#f[naviga
 - Array Viewer: Any expression can go in the brackets and be displayed in 2D.
   The correct indexing scheme for Cholla is `xid + yid*nx + zid*nx*ny +
   field*n_cells`.
+
+## Arm MAP
+
+- `map --profile --cuda-kernel-analysis --cuda-transfer-analysis mpirun -n 4 EXECUTABLE ARGS`
+  - `--profile`: Standard flag for profiling
+  - `--cuda-kernel-analysis`: Enables CUDA kernel profiling
+  - `--cuda-transfer-analysis`: Enables CUDA memory transfer profiling
+  - The CUDA args require `-lineinfo` when compiling
+  - The CUDA args have a HUGE performance impact on host code so host and device
+    code should be profiled separately. The NVIDIA GPU metrics will be adversely
+    affected by this overhead, particularly the GPU utilization metric
+- View with `map —connect MAP_FILE.map` or download and open with Arm MAP
+- Can make reports from .map files with `perf-report map-file.map`
+
+## Arm Performance Reports
+
+`perf-report mpirun -n 4 EXECUTABLE ARGS` or `perf-report map-file.map`.
+Generates a nice HTML and text summary of the profiling.
