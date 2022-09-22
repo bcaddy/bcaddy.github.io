@@ -1,7 +1,7 @@
 ---
 title: Community Outreach
 icon: fas fa-users
-order: 3
+order: 4
 ---
 
 ![community](/assets/img/tabs/community.jpg)

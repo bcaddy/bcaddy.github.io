@@ -1,7 +1,7 @@
 ---
 title: Contact
 icon: fas fa-envelope
-order: 4
+order: 5
 ---
 
 ### **Email:**
