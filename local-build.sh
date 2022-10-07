@@ -5,8 +5,6 @@
 
 #set -x #echo all commands
 
-REPO_ROOT=$(git rev-parse --show-toplevel)
-
 if [[ $1 == "run" ]]; then
     # Run the website with auto update on
     set -m
@@ -14,7 +12,8 @@ if [[ $1 == "run" ]]; then
     jekyll clean
 
 elif [[ $1 == "test" ]]; then
-    ${REPO_ROOT}/tools/deploy.sh --dry-run
+    bundle exec jekyll b -d "_site"
+    bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
     jekyll clean
 
 else

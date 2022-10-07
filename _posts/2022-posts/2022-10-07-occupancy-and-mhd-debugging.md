@@ -29,4 +29,5 @@ correct results, also, the analytical cases are much simplier.
 
 ## Other
 
-- Consulted on the refactoring of the I/O routines.
+- Consulted on the refactoring of the I/O routines
+- Update this website to v5.3.0
