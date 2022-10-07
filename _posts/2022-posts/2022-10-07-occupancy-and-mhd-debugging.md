@@ -1,4 +1,3 @@
-
 ---
 title:      Occupancy & MHD Debugging  # Title
 author:     Robert Caddy               # Author Name
