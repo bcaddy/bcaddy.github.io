@@ -1,5 +1,5 @@
 ---
-title:      Debugging                  # Title
+title:      Hydro vs. MHD in Hydro Problems                  # Title
 author:     Robert Caddy               # Author Name
 date:       2022-10-14 15:20:32 -0400  # Date
 categories: [Cholla, MHD]     # Catagories, no more than 2
