@@ -219,7 +219,7 @@ for double star states go to step 3c.
 
 $$
 
-    \vec{F}_{HLLC} =
+    \vec{F}_{HLLD} =
         \begin{cases}
             \vec{F}_L  & \text{if}\ 0 < S_L
             \\
@@ -261,7 +261,7 @@ $$
          \end{bmatrix}
 $$
 
-### 3b. \\( F_L^*\\) or \\(F_R^* \\) State
+### 3b. \\( F_L^\*\\) or \\(F_R^\* \\) State
 
 This is the region between the fast magnetosonic waves and the Alfvên waves.
 These fluxes are more complicated and require the use of the fluxes from step 3a
