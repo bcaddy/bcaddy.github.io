@@ -10,13 +10,16 @@ math:       true                      # Does this post contain math?
 #image:      /assets/img/#            # Header image path
 ---
 
+## Summary
 
-Still working on bug hunting. I tested a bunch of different things and finally
-found the bug that was causing the \\( B_x \\) field to update. There was a
-copy/paste error in the CT field calculations and I was using the wrong velocity
-for one of the upwinding steps. My next step is going to be trying out simple
-waves. I'll be using the wave tests from ATHENA++ which are detailed in
-[Gardiner & Stone 2005](https://arxiv.org/abs/astro-ph/0501557). The initial conditions are given by
+This is a repository of some MHD test problems. Most of them are taken from
+Athena++ and [Gardiner & Stone 2005](https://arxiv.org/abs/astro-ph/0501557)
+
+## Linear Waves
+
+I'll be using the wave tests from Athena++ which are detailed in
+[Gardiner & Stone 2005](https://arxiv.org/abs/astro-ph/0501557).
+The initial conditions are given by
 
 $$
     \vec{U} = \vec{\bar{U}} + A \vec{R_k} \cos\left(2\pi x\right).
