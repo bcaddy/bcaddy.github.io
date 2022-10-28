@@ -25,7 +25,9 @@ Compared hardware vs software performance atomics on AMD MI250X in Cholla.
 There's no difference for us, probably since the kernel is bandwidth bound with
 relatively few atomics.
 
-In the process of testing this I also modified our atomics to work with AMD and found an issue with the ROCm occupancy API, the issue is detailed in [ROCm issue \#1842](https://github.com/RadeonOpenCompute/ROCm/issues/1842)
+In the process of testing this I also modified our atomics to work with AMD and
+found an issue with the ROCm occupancy API, the issue is detailed in [ROCm issue
+\#1842](https://github.com/RadeonOpenCompute/ROCm/issues/1842)
 
 ## Alfven Wave Debugging
 
