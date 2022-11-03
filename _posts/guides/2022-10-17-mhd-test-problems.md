@@ -13,24 +13,24 @@ math:       true                      # Does this post contain math?
 ## Summary
 
 This is a repository of some MHD test problems. Most of them are taken from
-Athena++ and [Gardiner & Stone 2005](https://arxiv.org/abs/astro-ph/0501557)
+Athena++ and [Gardiner & Stone 2008](https://ui.adsabs.harvard.edu/abs/2008JCoPh.227.4123G/abstract)
 
 ## Linear Waves
 
 I'll be using the wave tests from Athena++ which are detailed in
-[Gardiner & Stone 2005](https://arxiv.org/abs/astro-ph/0501557).
+[Gardiner & Stone 2008](https://ui.adsabs.harvard.edu/abs/2008JCoPh.227.4123G/abstract).
 The initial conditions are given by
 
 $$
-    \vec{U} = \vec{\bar{U}} + A \vec{R_k} \cos\left(2\pi x\right).
+    \vec{U} = \vec{\bar{U}} + A \vec{R_k} \cos\left(\frac{2\pi x}{\lambda}\right).
 $$
 
 Where \\( \vec{U} \\) is the initial condition in conserved variables and
 follows the usual density, momentum, magnetic field, energy ordering,
 \\(\vec{\bar{U}} \\) is the constant background state that is being pertubed by
 the wave, \\( A \\) is the amplitude of the wave/perturbation, \\( R_k \\) is
-the right eigenvector and depends on the wave, and \\( x \\) is the position in
-space. Magnetic fields will have to be implemented slightly differently than the
+the right eigenvector and depends on the wave, \\( x \\) is the position in
+space and \\( \lambda \\) is the wavelength; \\(\lambda = 1 \\) for the initial conditions and waves listed here. Magnetic fields will have to be implemented slightly differently than the
 other components because they're at slightly different positions (cell faces
 rather than centers). \\( R_k \\) is in conserved variables with the order
 \\( \left( \rho, \rho v_1, \rho v_2, \rho v_3, B_1, B_2, B_3, E \right) \\)
@@ -63,55 +63,55 @@ $$
             0 \\
             0 \\
             1 \\
-            \sqrt{2} \\
-            1/2
+            3/2 \\
+            0
          \end{bmatrix}.
 $$
 
 \\( \vec{R}_k \\) for fast magnetosonic waves with \\( c_f = 2 \\)
 
 $$
-    \vec{R}_{\pm c_f} = \frac{1}{6\sqrt{5}}
+    \vec{R}_{\pm c_f} = \frac{1}{2\sqrt{5}}
         \begin{bmatrix}
-            6 \\
-            \pm 12 \\
-            \mp 4 \sqrt{2} \\
+            2 \\
+            \pm 4 \\
             \mp 2 \\
             0 \\
-            8 \sqrt{2} \\
+            0 \\
             4 \\
-            27
+            0 \\
+            9
          \end{bmatrix}.
 $$
 
 \\( \vec{R}_k \\) for slow magnetosonic waves with \\( c_s = 0.5 \\)
 
 $$
-    \vec{R}_{\pm c_s} = \frac{1}{6\sqrt{5}}
+    \vec{R}_{\pm c_s} = \frac{1}{2\sqrt{5}}
         \begin{bmatrix}
-            12 \\
-            \pm 6 \\
-            \pm 8 \sqrt{2} \\
+            4 \\
+            \pm 2 \\
             \pm 4 \\
             0 \\
-            -4 \sqrt{2} \\
+            0 \\
             -2 \\
-            9
+            0 \\
+            3
          \end{bmatrix}.
 $$
 
 \\( \vec{R}_k \\) for Alfvén waves with \\( c_a = 1 \\)
 
 $$
-    \vec{R}_{\pm c_a} = \frac{1}{3}
+    \vec{R}_{\pm c_a} =
         \begin{bmatrix}
             0 \\
             0 \\
-            \pm 1 \\
-            \mp 2\sqrt{2} \\
             0 \\
-            -1 \\
-            2 \sqrt{2} \\
+            \mp 1 \\
+            0 \\
+            0 \\
+            1 \\
             0
         \end{bmatrix}.
 $$
@@ -132,3 +132,33 @@ $$
             1
         \end{bmatrix}.
 $$
+
+### Rotated Linear Waves
+
+[Gardiner & Stone
+2008](https://ui.adsabs.harvard.edu/abs/2008JCoPh.227.4123G/abstract) use the
+following rotation for rotated waves. \\( \alpha \\) is the pitch angle and \\(
+\beta \\) is the yaw angle.
+
+$$
+        \begin{bmatrix}
+            x \\
+            y \\
+            z
+         \end{bmatrix}
+         =
+         \begin{bmatrix}
+            x_1 \cos{\alpha} \cos{\beta} - x_2 \sin{\beta} - x_3 \sin{\alpha} \cos{\beta} \\
+            x_1 \cos{\alpha} \sin{\beta} - x_2 \cos{\beta} - x_3 \sin{\alpha} \sin{\beta}\\
+            x_1 \sin{\alpha} - x_3 \cos{\alpha}
+         \end{bmatrix}.
+$$
+
+At an angle where \\( \sin{\alpha} = 2/3 \\) and \\( \sin{\beta} = 2/\sqrt{5}
+\\) Stone & Gardiner use a domain of \\( 0 \leqslant x \leqslant 3.0 \\), \\( 0
+\leqslant y \leqslant 1.5 \\), and \\( 0 \leqslant z \leqslant 1.5 \\)
+
+## MHD Riemann Problems
+
+See the [MHD Riemann Problems]({% post_url
+guides/2021-11-19-MHD-Riemann-Problems %}) post for info on MHD Riemann Problems.
