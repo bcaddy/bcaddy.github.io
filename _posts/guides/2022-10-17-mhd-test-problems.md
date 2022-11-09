@@ -137,8 +137,8 @@ $$
 
 [Gardiner & Stone
 2008](https://ui.adsabs.harvard.edu/abs/2008JCoPh.227.4123G/abstract) use the
-following rotation for rotated waves. \\( \alpha \\) is the pitch angle and \\(
-\beta \\) is the yaw angle.
+following rotation for rotated waves. \\( \alpha \\) is the pitch angle (rotation about \\( y \\))  and \\(
+\beta \\) is the yaw angle (rotation about \\( z \\)).
 
 $$
         \begin{bmatrix}
