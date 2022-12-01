@@ -21,27 +21,27 @@ problems such as the Orszag-Tang Vortex.
 
 ## Table of Riemann Problems
 
-| Field           | Brio & Wu[^bw] | Dai & Woodward[^dw]             | Ryu & Jones 4d[^rj]    | Einfeldt Strong Rarefaction[^fr][^hlld] |
-| \\( \gamma \\)  | \\( 2 \\)      | \\( \frac{5}{3} \\)             | \\( \frac{5}{3} \\)    | \\( 1.4 \\)                             |
-| \\( t_{max} \\) | \\( 0.1 \\)    | \\( 0.2 \\)                     | \\( 0.16 \\)           | \\( 0.16 \\)                            |
-| **Left**        |                |                                 |                        |                                         |
-| \\( \rho \\)    | \\( 1.0 \\)    | \\( 1.08 \\)                    | \\( 1.0 \\)            | \\( 1.0 \\)                             |
-| \\( P \\)       | \\( 1.0 \\)    | \\( 1.0 \\)                     | \\( 1.0 \\)            | \\( 0.45 \\)                            |
-| \\( V_x \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)            | \\( -v_0 = -2.0 \\)                     |
-| \\( V_y \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)            | \\( 0.0 \\)                             |
-| \\( V_z \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)            | \\( 0.0 \\)                             |
-| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.7 \\)            | \\( 0.0 \\)                             |
-| \\( B_y \\)     | \\( 1.0 \\)    | \\( \frac{3.6}{\sqrt{4\pi}} \\) | \\( 0.0 \\)            | \\( 0.5 \\)                             |
-| \\( B_z \\)     | \\( 0.0 \\)    | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)            | \\( 0.0 \\)                             |
-| **Right**       |                |                                 |                        |                                         |
-| \\( \rho \\)    | \\( 0.128 \\)  | \\( 1.0 \\)                     | \\( 0.3 \\)            | \\( 1.0 \\)                             |
-| \\( P \\)       | \\( 0.1 \\)    | \\( 0.2 \\)                     | \\( 0.2 \\)            | \\( 0.45 \\)                            |
-| \\( V_x \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)            | \\( v_0 = 2.0 \\)                       |
-| \\( V_y \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)            | \\( 0.0 \\)                             |
-| \\( V_z \\)     | \\( 0.0 \\)    | \\( 1.0 \\)                     | \\( 1.0 \\)            | \\( 0.0 \\)                             |
-| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.7 \\)            | \\( 0.0 \\)                             |
-| \\( B_y \\)     | \\( -1.0 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 1.0 \\)            | \\( 0.5 \\)                             |
-| \\( B_z \\)     | \\( 0.0 \\)    | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)            | \\( 0.0 \\)                             |
+| Field           | Brio & Wu[^bw] | Dai & Woodward[^dw]             | Einfeldt Strong Rarefaction[^fr][^hlld] | Ryu & Jones 1a[^rj]           | Ryu & Jones 2a[^rj]             | Ryu & Jones 4d[^rj] |
+| \\( \gamma \\)  | \\( 2 \\)      | \\( \frac{5}{3} \\)             | \\( 1.4 \\)                             | \\( \frac{5}{3} \\)           | \\( \frac{5}{3} \\)             | \\( \frac{5}{3} \\) |
+| \\( t_{max} \\) | \\( 0.1 \\)    | \\( 0.2 \\)                     | \\( 0.16 \\)                            | \\( 0.08 \\)                  | \\( 0.2 \\)                     | \\( 0.16 \\)        |
+| **Left**        |                |                                 |                                         |                               |                                 |                     |
+| \\( \rho \\)    | \\( 1.0 \\)    | \\( 1.08 \\)                    | \\( 1.0 \\)                             | \\( 1.0 \\)                   | \\( 1.08 \\)                    | \\( 1.0 \\)         |
+| \\( P \\)       | \\( 1.0 \\)    | \\( 1.0 \\)                     | \\( 0.45 \\)                            | \\( 20 \\)                    | \\( 0.95 \\)                    | \\( 1.0 \\)         |
+| \\( V_x \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( -v_0 = -2.0 \\)                     | \\( 10.0 \\)                  | \\( 1.2 \\)                     | \\( 0.0 \\)         |
+| \\( V_y \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.01 \\)                    | \\( 0.0 \\)         |
+| \\( V_z \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.5 \\)                     | \\( 0.0 \\)         |
+| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( 2\sqrt{4\pi} \\)            | \\( 0.7 \\)         |
+| \\( B_y \\)     | \\( 1.0 \\)    | \\( \frac{3.6}{\sqrt{4\pi}} \\) | \\( 0.5 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{3.6}{\sqrt{4\pi}} \\) | \\( 0.0 \\)         |
+| \\( B_z \\)     | \\( 0.0 \\)    | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)         |
+| **Right**       |                |                                 |                                         |                               |                                 |                     |
+| \\( \rho \\)    | \\( 0.128 \\)  | \\( 1.0 \\)                     | \\( 1.0 \\)                             | \\( 1.0 \\)                   | \\( 1.0 \\)                     | \\( 0.3 \\)         |
+| \\( P \\)       | \\( 0.1 \\)    | \\( 0.2 \\)                     | \\( 0.45 \\)                            | \\( 1.0 \\)                   | \\( 1.0 \\)                     | \\( 0.2 \\)         |
+| \\( V_x \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( v_0 = 2.0 \\)                       | \\( -10 \\)                   | \\( 0.0 \\)                     | \\( 0.0 \\)         |
+| \\( V_y \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.0 \\)                     | \\( 0.0 \\)         |
+| \\( V_z \\)     | \\( 0.0 \\)    | \\( 1.0 \\)                     | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.0 \\)                     | \\( 1.0 \\)         |
+| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( 2\sqrt{4\pi} \\)            | \\( 0.7 \\)         |
+| \\( B_y \\)     | \\( -1.0 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.5 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 1.0 \\)         |
+| \\( B_z \\)     | \\( 0.0 \\)    | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)         |
 
 ## Details on Each Problem
 
@@ -81,25 +81,6 @@ Waves, left ot right:
 ![Dai & Woodward Image](/assets/img/2021-post-assets/11-November/Dai-Woodward-Miniati-Martin-2011-fig-3.png)
 *Dai & Woodward Shock Tube at \\( t=0.2 \\). Source: Figure 3 from Miniati & Martin 2011[^charm]*
 
-### Ryu & Jones Shock Tube 4d[^rj]
-
-Ryu & Jones 1995 contains a wealth of different shock tubes and is an excellent
-resource. I will be focusing on a variant of their Tube 4d which features a
-switch-on slow rarefaction. Switch-on/off magnetosonic waves cause the
-tangential magnetic field to turn on/off.
-
-Waves, left ot right:
-
-1. Hydrodynamic rarefaction
-2. Switch on slow shock
-3. Contact discontinuity
-4. Slow Shock
-5. Alfvên/Rotation wave
-6. Fast rarefaction
-
-![Ryu & Jones Image](/assets/img/2021-post-assets/11-November/Ryu-Jones-Miniati-Martin-2011-fig-4.png)
-*Ryu & Jones Shock Tube at \\( t=0.16 \\). Source: Figure 4 from Miniati & Martin 2011[^charm]*
-
 ### Einfeldt Strong Rarefaction[^fr][^hlld]
 
 This is the only test here that isn't a shock tube. We have identical initial
@@ -119,6 +100,58 @@ Waves, left ot right:
 
 ![Strong Rarefaction Image](/assets/img/2021-post-assets/11-November/Strong-rarefaction-Miniati-Martin-2011-fig-5.png)
 *EinFeldt Strong Rarefaction at \\( t=0.16 \\). Source: Figure 5 from Miniati & Martin 2011[^charm]*
+
+### Ryu & Jones Shock Tube 1a[^rj]
+
+Ryu & Jones 1995 contains a wealth of different shock tubes and is an excellent
+resource. Shock tube 1a has a fairly simple and easy to read set of 5 waves.
+Does not include an Alfvên wave
+
+Waves, left ot right:
+
+1. Fast shock
+2. Slow rarefaction
+3. Contact discontinuity
+4. Slow shock
+5. Fast shock
+
+![Ryu & Jones Image](/assets/img/2021-post-assets/11-November/Ryu-Jones-1995-fig-1a.png)
+*Ryu & Jones Shock Tube at \\( t=0.08 \\). Source: Figure 1a from Ryu & Jones 1995 [^rj]*
+
+### Ryu & Jones Shock Tube 2a[^rj]
+
+Shock tube 2a has a fairly simple and easy to read set of 7 waves. Does include
+an Alfvên wave.
+
+Waves, left ot right:
+
+1. Fast shock
+2. Alfvên wave
+3. Slow shock
+4. Contact discontinuity
+5. Slow shock
+6. Alfvên wave
+7. Fast shock
+
+![Ryu & Jones Image](/assets/img/2021-post-assets/11-November/Ryu-Jones-1995-fig-2a.png)
+*Ryu & Jones Shock Tube at \\( t=0.2 \\). Source: Figure 1a from Ryu & Jones 1995 [^rj]*
+
+### Ryu & Jones Shock Tube 4d[^rj]
+
+Shock Tube 4d features a switch-on slow rarefaction. Switch-on/off magnetosonic
+waves cause the tangential magnetic field to turn on/off.
+
+Waves, left ot right:
+
+1. Hydrodynamic rarefaction
+2. Switch on slow shock
+3. Contact discontinuity
+4. Slow Shock
+5. Alfvên/Rotation wave
+6. Fast rarefaction
+
+![Ryu & Jones Image](/assets/img/2021-post-assets/11-November/Ryu-Jones-Miniati-Martin-2011-fig-4.png)
+*Ryu & Jones Shock Tube at \\( t=0.16 \\). Source: Figure 4 from Miniati & Martin 2011[^charm]*
 
 ## Citations
 
@@ -140,7 +173,7 @@ Waves, left ot right:
 [^rj]: Ryu, D., Jones, T. W., &#38; Frank, A. (1995). Numerical
     Magnetohydrodynamics in Astrophysics: Algorithm and Tests for
     Multi-Dimensional Flow 1. *The Astrophysical Journal*.
-    [http://adsabs.harvard.edu/pdf/1995ApJ...452..785R](http://adsabs.harvard.edu/pdf/1995ApJ...452..785R)
+    [https://ui.adsabs.harvard.edu/abs/1995ApJ...442..228R/abstract](https://ui.adsabs.harvard.edu/abs/1995ApJ...442..228R/abstract)
 
 [^fr]: Einfeldt, B., Munz, C. D., Roe, P. L., &#38; W green, B. (1991). On
     Godunov-Type Methods near Low Densities. *JOURNAL OF COMPUTATIONAL PHYSICS*,
