@@ -16,6 +16,13 @@ elif [[ $1 == "test" ]]; then
     bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
     jekyll clean
 
+elif [[ $1 == "update" ]]; then
+    echo "See this page for instructions on updating Chirpy:"
+    echo "https://chirpy.cotes.page/posts/getting-started/#upgrading"
+    echo ""
+    echo "See this page for instructions on updating Ruby"
+    echo "https://stackoverflow.com/questions/51126403/you-dont-have-write-permissions-for-the-library-ruby-gems-2-3-0-directory-ma"
+
 else
     echo "Command not found. Please only use \"run\" or \"test\" "
 fi
