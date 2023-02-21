@@ -21,6 +21,8 @@ problems such as the Orszag-Tang Vortex.
 
 ## Table of Riemann Problems
 
+*Please note that many of the cited papers have typos in their initial conditions. These are the correct initial conditions as verified by the Athena code and the plots in the papers*
+
 | Field           | Brio & Wu[^bw] | Dai & Woodward[^dw]             | Einfeldt Strong Rarefaction[^fr][^hlld] | Ryu & Jones 1a[^rj]           | Ryu & Jones 2a[^rj]             | Ryu & Jones 4d[^rj] |
 | \\( \gamma \\)  | \\( 2 \\)      | \\( \frac{5}{3} \\)             | \\( 1.4 \\)                             | \\( \frac{5}{3} \\)           | \\( \frac{5}{3} \\)             | \\( \frac{5}{3} \\) |
 | \\( t_{max} \\) | \\( 0.1 \\)    | \\( 0.2 \\)                     | \\( 0.16 \\)                            | \\( 0.08 \\)                  | \\( 0.2 \\)                     | \\( 0.16 \\)        |
@@ -30,7 +32,7 @@ problems such as the Orszag-Tang Vortex.
 | \\( V_x \\)     | \\( 0.0 \\)    | \\( 1.2 \\)                     | \\( -v_0 = -2.0 \\)                     | \\( 10.0 \\)                  | \\( 1.2 \\)                     | \\( 0.0 \\)         |
 | \\( V_y \\)     | \\( 0.0 \\)    | \\( 0.01 \\)                    | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.01 \\)                    | \\( 0.0 \\)         |
 | \\( V_z \\)     | \\( 0.0 \\)    | \\( 0.5 \\)                     | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.5 \\)                     | \\( 0.0 \\)         |
-| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.7 \\)         |
+| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.7 \\)         |
 | \\( B_y \\)     | \\( 1.0 \\)    | \\( \frac{3.6}{\sqrt{4\pi}} \\) | \\( 0.5 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{3.6}{\sqrt{4\pi}} \\) | \\( 0.0 \\)         |
 | \\( B_z \\)     | \\( 0.0 \\)    | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)         |
 | **Right**       |                |                                 |                                         |                               |                                 |                     |
@@ -39,7 +41,7 @@ problems such as the Orszag-Tang Vortex.
 | \\( V_x \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( v_0 = 2.0 \\)                       | \\( -10 \\)                   | \\( 0.0 \\)                     | \\( 0.0 \\)         |
 | \\( V_y \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.0 \\)                     | \\( 0.0 \\)         |
 | \\( V_z \\)     | \\( 0.0 \\)    | \\( 0.0 \\)                     | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( 0.0 \\)                     | \\( 1.0 \\)         |
-| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.7 \\)         |
+| \\( B_x \\)     | \\( 0.75 \\)   | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.7 \\)         |
 | \\( B_y \\)     | \\( -1.0 \\)   | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 0.5 \\)                             | \\( \frac{5}{\sqrt{4\pi}} \\) | \\( \frac{4}{\sqrt{4\pi}} \\)   | \\( 1.0 \\)         |
 | \\( B_z \\)     | \\( 0.0 \\)    | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)                             | \\( 0.0 \\)                   | \\( \frac{2}{\sqrt{4\pi}} \\)   | \\( 0.0 \\)         |
 
