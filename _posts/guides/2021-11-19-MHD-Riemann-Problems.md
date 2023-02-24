@@ -162,7 +162,7 @@ Waves, left ot right:
     Journal, Supplement Series*, *195*(1).
     [https://doi.org/10.1088/0067-0049/195/1/5](https://doi.org/10.1088/0067-0049/195/1/5)
 
-[^bw]: Brio, M., &#38; Wv, C. C. (1988). An Upwind Differencing Scheme for
+[^bw]: Brio, M., &#38; Wu, C. C. (1988). An Upwind Differencing Scheme for
     the Equations of Ideal Magnetohydrodynamics. *JOURNAL OF COMPUTATIONAL
     PHYSICS*, *75*, 40–422.
     [https://ui.adsabs.harvard.edu/abs/1988JCoPh..75..400B/abstract](https://ui.adsabs.harvard.edu/abs/1988JCoPh..75..400B/abstract)
