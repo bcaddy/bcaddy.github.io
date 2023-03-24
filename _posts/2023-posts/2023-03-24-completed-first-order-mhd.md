@@ -34,6 +34,7 @@ I added initial conditions and a regression test for the Orszag-Tang Vortex deta
 
 ## Other
 
+- Automated testing is now ready. See [PR #229](https://github.com/cholla-hydro/cholla/pull/229) for details.
 - Updated this website to v5.6.0
 - Fixed failing tests on automated testing. Just had some corrupted data that needed reset.
 - Opened an issue on converting from `int` to `size_t`/`ptrdiff_t` where appropriate. [Issue #271](https://github.com/cholla-hydro/cholla/issues/271)
