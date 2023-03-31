@@ -19,6 +19,7 @@ Astrophysical Hydrodynamics* by Michael Zingale](http://bender.astro.sunysb.edu/
 - Write a test for the current PLMC implementation
 - Refactor the PLMC kernel to use device functions and structs. It was originally written before CUDA supported device functions and so is a bit of a monolith. Now it's much shorter and more modular. This potentially allows some code reuse with piecewise parabolic reconstruction.
 - Add MHD support. MHD support is a fairly simple extension is most places but the projection into and out of the characteristic variables is quite complex, much more so than in pure hydro.
+- Add MHD PLMC regression test
 
 Additionally I consolodated all the basic utility functions for energy, pressure, etc into the hydro_utilities.h file. Now there are a series of functions there that work for hydro or MHD instead of having different versions in different headers.
 
@@ -31,4 +32,5 @@ Automated testing got merged in this week ([PR #229](https://github.com/cholla-h
 ## Other
 
 - Miscellaneous post MHD tweaks/fixes. See [PR #277](https://github.com/cholla-hydro/cholla/pull/277) for details
+- Fix another 7 clang-tidy checks. See [PR #279](https://github.com/cholla-hydro/cholla/pull/279) for details
 - Update website to v5.6.1
