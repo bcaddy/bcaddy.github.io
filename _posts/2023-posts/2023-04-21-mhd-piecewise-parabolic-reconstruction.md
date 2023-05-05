@@ -3,7 +3,7 @@ title:      MHD Piecewise Parabolic Reconstruction                # Title
 author:     Robert Caddy               # Author Name
 date:       2023-04-21 09:49:16 -0400  # Date
 categories: [MHD, Reconstruction]     # Catagories, no more than 2
-tags:       [PLMC, Automated Testing]                     # Tags, any number
+tags:       [PPMC, Automated Testing]                     # Tags, any number
 pin:        false                      # Should this post be pinned?
 toc:        true                       # Table of Contents?
 math:       false                      # Does this post contain math?

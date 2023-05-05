@@ -49,7 +49,7 @@ contain any).
 - \\(B \\), Magnetic Flux Density, also called just the Magnetic Field
 - \\(p_T \\), Total pressure
 - \\( \mathcal{E} \\), the EMF (ElectroMotive Force), in this application it can
-  be used interchangably with the magnetic fields. See the section on the CT
+  be used interchangeably with the electric fields. See the section on the CT
   fields for details
 - \\( C_{CFL} \\), the CFL number, must be less than \\(1/2\\)
 

@@ -23,7 +23,11 @@
         "pthreads",
         "swcache",
         "Teuben",
-        "Zotero"
+        "Zotero",
+        "Felker"
     ]
-    "files.defaultLanguage": "markdown"
+    "files.defaultLanguage": "markdown",
+    "markdownlint.config": {
+        "MD037": false
+    }
 }
