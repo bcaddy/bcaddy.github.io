@@ -3,7 +3,7 @@ title:      PPM 3 & Frontier Scaling Tests                 # Title
 author:     Robert Caddy               # Author Name
 date:       2023-05-05 16:46:31 -0400  # Date
 categories: [MHD, Reconstruction]     # Catagories, no more than 2
-tags:       [PPMC, Reconstruction, Scaling Tests, Frontier]                     # Tags, any number
+tags:       [PPMC, Reconstruction, Scaling Tests, Frontier] # Tags, any number
 pin:        false                      # Should this post be pinned?
 toc:        true                       # Table of Contents?
 math:       false                      # Does this post contain math?
@@ -24,8 +24,8 @@ I have a committee meeting soon so I spent part of the week prepping for that; w
 
 Now that I have working MHD code with PLMC and access to Frontier it's time to run some scaling tests! I'm still waiting on the largest two tests to run but the results from the rest are very promising and show excellent performance. You can find the repo with all my scaling tests stuff [here](https://github.com/bcaddy/scaling-tests).
 
-![cells_per_second](/assets/img/2023-post-assets/2023-05-05-cells_per_second.png)
-![ms_per_gpu](/assets/img/2023-post-assets/2023-05-05-ms_per_gpu.png)
+![cells_per_second](/assets/img/2023-post-assets/05-May/2023-05-05-cells_per_second.png)
+![ms_per_gpu](/assets/img/2023-post-assets/05-May/2023-05-05-ms_per_gpu.png)
 
 ## Other
 
