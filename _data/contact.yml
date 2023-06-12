@@ -24,6 +24,10 @@
   type: linkedin
   icon: 'fab fa-linkedin'   # icons powered by <https://fontawesome.com/>
   url:  'https://www.linkedin.com/in/robertcaddy1/'  # Fill with your Linkedin homepage
+-
+  type: ORCID
+  icon: 'fa-brands fa-orcid'   # icons powered by <https://fontawesome.com/>
+  url:  'https://orcid.org/0000-0002-4475-3181'  # Fill with your Linkedin homepage
 # -
 #   type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
