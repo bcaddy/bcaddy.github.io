@@ -18,7 +18,7 @@ elif [[ $1 == "test" ]]; then
 
 elif [[ $1 == "update" ]]; then
     echo "See this page for instructions on updating Chirpy:"
-    echo "https://chirpy.cotes.page/posts/getting-started/#upgrading"
+    echo "https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide"
     echo ""
     echo "See this page for instructions on updating Ruby"
     echo "https://stackoverflow.com/questions/51126403/you-dont-have-write-permissions-for-the-library-ruby-gems-2-3-0-directory-ma"
