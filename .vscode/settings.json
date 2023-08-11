@@ -24,8 +24,9 @@
         "swcache",
         "Teuben",
         "Zotero",
-        "Felker"
-    ]
+        "Felker",
+        "PEARC"
+    ],
     "files.defaultLanguage": "markdown",
     "markdownlint.config": {
         "MD037": false
