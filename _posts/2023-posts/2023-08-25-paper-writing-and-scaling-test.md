@@ -24,6 +24,10 @@ I found a few issues with how I was do scaling tests, namely using the wrong tim
 
 After some more investigation it does appear that the lowered performance in large runs is due to a small number of poorly performing GPUs. The average timing for the integrator is almost identical to the minimum time but much less than the maximum, indicative of a small number of slow GPUs.
 
+## Cells Per GPU Tests
+
+I wrote some code to check the GPU memory usage for Cholla. It turns out that we we're underutilizing the GPUs on Frontier and can fit about 5.6 times more cells on each GPU, potentially enabling much larger simulations. [PR #322](https://github.com/cholla-hydro/cholla/pull/322).
+
 ## Other
 
 - Rebase various branches and PRs
