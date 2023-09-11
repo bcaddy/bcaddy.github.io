@@ -29,5 +29,5 @@ I did find a few other minor bugs.
 ## Other
 
 - Wrote a LaTeX preamble for myself
-- Read and presented on [Bailey et al. 2022](http://arxiv.org/abs/2209.08054)
+- Read and presented on [Bailey et al. 2022](https://arxiv.org/abs/2209.08054)
 - Read and wrote report on [Luhman 2012](https://www.annualreviews.org/doi/10.1146/annurev-astro-081811-125528)

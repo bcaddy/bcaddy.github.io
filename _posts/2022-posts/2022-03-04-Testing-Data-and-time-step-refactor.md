@@ -34,7 +34,7 @@ so that the entire reduction can be done on the GPU rather than on both GPU and
 CPU. I'm basing my reduction code off of [this
 presentation](https://developer.download.nvidia.com/assets/cuda/files/reduction.pdf)
 by Mark Harris at NVIDIA and [this blog
-post](http://seanbone.ch/cuda-efficient-parallel-reduction/) by Sean Bone, which
+post](https://seanbone.ch/cuda-efficient-parallel-reduction/) by Sean Bone, which
 is basically just an easier to read version of Mark Harris' slides.
 
 ## Testing Ongoing Development

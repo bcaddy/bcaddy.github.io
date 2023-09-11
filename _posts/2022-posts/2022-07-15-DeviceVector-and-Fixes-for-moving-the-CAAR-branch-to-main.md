@@ -45,5 +45,5 @@ and allowing easy host side access to values in the array. [PR
 
 ## Reading
 
-- [Yuankang et al. 2022](http://arxiv.org/abs/2110.14246)
-- [Di Teodor et al. 2022](http://arxiv.org/abs/2008.09121)
+- [Yuankang et al. 2022](https://arxiv.org/abs/2110.14246)
+- [Di Teodor et al. 2022](https://arxiv.org/abs/2008.09121)

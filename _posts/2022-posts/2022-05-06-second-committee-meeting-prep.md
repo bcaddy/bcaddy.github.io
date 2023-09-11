@@ -19,4 +19,4 @@ also started on the presentation but have not completed it yet.
 ## Reading
 
 - [Ntormoussi et al. 2022](https://www.aanda.org/10.1051/0004-6361/202037835)
-- [Magnetic Fields in Diffuse Media](http://link.springer.com/10.1007/978-3-662-44625-6)
+- [Magnetic Fields in Diffuse Media](https://link.springer.com/10.1007/978-3-662-44625-6)

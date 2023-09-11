@@ -15,7 +15,7 @@ math:       false                      # Does this post contain math?
 This week I started on the MHD piecewise linear reconstruction in the characteristic variables (PLMC). The steps I've completed are as follows:
 
 - Do some research on PLMC. See [Stone et al. 2008](https://ui.adsabs.harvard.edu/abs/2008ApJS..178..137S/abstract) and [*Introduction to Computational
-Astrophysical Hydrodynamics* by Michael Zingale](http://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf).
+Astrophysical Hydrodynamics* by Michael Zingale](https://bender.astro.sunysb.edu/hydro_by_example/CompHydroTutorial.pdf).
 - Write a test for the current PLMC implementation
 - Refactor the PLMC kernel to use device functions and structs. It was originally written before CUDA supported device functions and so is a bit of a monolith. Now it's much shorter and more modular. This potentially allows some code reuse with piecewise parabolic reconstruction.
 - Add MHD support. MHD support is a fairly simple extension is most places but the projection into and out of the characteristic variables is quite complex, much more so than in pure hydro.

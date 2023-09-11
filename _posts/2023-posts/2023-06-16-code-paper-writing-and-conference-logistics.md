@@ -14,7 +14,7 @@ The last two weeks have been a bit of a grab bag of random tasks but let's start
 
 ## MHD Code Paper
 
-In group meeting we discussed [Chamba et al. 2022](http://arxiv.org/abs/2207.12959) and [Knapen et al. 2023](http://arxiv.org/abs/2110.05503) which discuss how to write an astronomy paper. They were quite useful and I recommend them.
+In group meeting we discussed [Chamba et al. 2022](https://arxiv.org/abs/2207.12959) and [Knapen et al. 2023](https://arxiv.org/abs/2110.05503) which discuss how to write an astronomy paper. They were quite useful and I recommend them.
 
 In terms of the paper itself, we finalized the outline and I finished the first draft of the methods section. I also made a first draft of the linear wave convergence plot and started on the shock tube plotting script.
 

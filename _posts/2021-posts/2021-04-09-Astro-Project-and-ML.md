@@ -44,5 +44,5 @@ ok, I need to check with a pure hydro wave to see if that works.
 
 # Other
 - Finished my Statement of Purpose for Rensselaer  summer school application
-- Finished the MHD review article [Spruit 2017](http://www.mpa-garching.mpg.de/~henk/mhd12.zip)
+- Finished the MHD review article [Spruit 2017](https://www.mpa-garching.mpg.de/~henk/mhd12.zip)
 - Minor CV updates

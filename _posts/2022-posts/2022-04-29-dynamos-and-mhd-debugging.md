@@ -51,15 +51,15 @@ that it returns to it's original shape with an increased strength.
   Milky-Way-like galaxy*](https://www.aanda.org/10.1051/0004-6361/202037835)
 - [Pariev & Colgate 2007, *A Magnetic Alpha-Omega Dynamo in Active Galactic
   Nuclei Disks: I. The Hydrodynamics of Star-Disk Collisions and Keplerian
-  Flow*](http://arxiv.org/abs/astro-ph/0611139)
+  Flow*](https://arxiv.org/abs/astro-ph/0611139)
 - [Pariev et al. 2007, *A Magnetic Alpha-Omega Dynamo in Active Galactic Nuclei
   Disks: II. Magnetic Field Generation, Theories and
-  Simulations*](http://arxiv.org/abs/astro-ph/0611188)
+  Simulations*](https://arxiv.org/abs/astro-ph/0611188)
 - [NASA *The Solar Dynamo*](https://solarscience.msfc.nasa.gov/dynamo.shtml)
 - [*Dynamo Theory* by Andrew
-  Gilbert](http://empslocal.ex.ac.uk/people/staff/adgilber/dynamoreview.pdf)
+  Gilbert](https://empslocal.ex.ac.uk/people/staff/adgilber/dynamoreview.pdf)
 - [*Mean Field Theory Dynamo
-  Solutions*](http://web.gps.caltech.edu/classes/ge131/notes2016/Ch22.pdf)
+  Solutions*](https://web.gps.caltech.edu/classes/ge131/notes2016/Ch22.pdf)
 
 ## Other
 
@@ -68,6 +68,6 @@ around. Looks interesting but we'll have to see how support goes in the next
 couple of years. If I was working on a high performance single node project I'd
 probably try it out; I'm not sure if it would work well yet for massively
 parallel systems though. Check out [Costanzo et al.
-2021](http://arxiv.org/abs/2107.11912) for an interesting performance
+2021](https://arxiv.org/abs/2107.11912) for an interesting performance
 comparison. Rust looks like it's currently losing but other benchmarks show it
 being faster so it might just be a matter of which benchmark you pick.

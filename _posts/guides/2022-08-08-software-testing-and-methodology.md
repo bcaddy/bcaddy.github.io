@@ -31,8 +31,8 @@ math:       false                      # Does this post contain math?
 
 ## GoogleTest Specific Links
 
-- (1)[Googletest Primer](http://google.github.io/googletest/primer.html)
-- (1)[Floating-Point Comparison](http://google.github.io/googletest/reference/assertions.html#floating-point)
+- (1)[Googletest Primer](https://google.github.io/googletest/primer.html)
+- (1)[Floating-Point Comparison](https://google.github.io/googletest/reference/assertions.html#floating-point)
 - (2)[Comparing Floating Point Numbers, 2012 Edition](https://randomascii.wordpress.com/2012/02/25/comparing-floating-point-numbers-2012-edition/)
   - *This is part of an excellent series of blogs on floating point numbers*
 
@@ -79,7 +79,7 @@ math:       false                      # Does this post contain math?
 - **Death Tests**
   - Special naming convention should be used. Specifically the name of all test
     suites with a death test in them should end in `DeathTest`
-    [Reason](http://google.github.io/googletest/advanced.html#death-tests-and-threads)
+    [Reason](https://google.github.io/googletest/advanced.html#death-tests-and-threads)
 - We need to have a rigorous naming scheme for tests and test suites. Google likely has suggestions
 - If you have series of tests that require the same setup (initializing a class etc) then you can
   use a test fixture to automate that. Each test will use its own instance of the fixture

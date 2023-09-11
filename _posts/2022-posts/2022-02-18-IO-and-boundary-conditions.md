@@ -36,4 +36,4 @@ it.
 
 - Read the dust polarization section (21.3) of *Physics of the Interstellar
   Medium and Intergalactic Medium* by Bruce T. Draine
-- Attended the *[Wrong Way: Lessons Learned and Possibilities for Using the “Wrong” Programming Approach on Leadership Computing Facility Systems](http://ideas-productivity.org/events/hpc-best-practices-webinars/)* webinar.
+- Attended the *[Wrong Way: Lessons Learned and Possibilities for Using the “Wrong” Programming Approach on Leadership Computing Facility Systems](https://ideas-productivity.org/events/hpc-best-practices-webinars/)* webinar.

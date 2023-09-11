@@ -13,7 +13,7 @@ if [[ $1 == "run" ]]; then
 
 elif [[ $1 == "test" ]]; then
     bundle exec jekyll b -d "_site"
-    bundle exec htmlproofer _site --disable-external --check-html --allow_hash_href
+    bundle exec htmlproofer _site --disable-external=true --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
     jekyll clean
 
 elif [[ $1 == "update" ]]; then
