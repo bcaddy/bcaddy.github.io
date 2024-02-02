@@ -12,7 +12,7 @@ math:       false                      # Does this post contain math?
 
 ## Cholla Hack Day/v3.0
 
-We've been working on our release of v3.0 of Cholla so we spent our hack day this week finalizing that and the official release should be early next week. In addition, I tried using CUDA streams to run multiple kernels concurrently on the GPU. This didn't lead to any performance increase so I scrapped it. Per the suggestion of some other members of the group I also made PRs [#368](https://github.com/cholla-hydro/cholla/pull/368) and [#369](https://github.com/cholla-hydro/cholla/pull/369) to make some member variables private and add automatic retries of the testing step in our Jenkins pipeline; sometimes tests fails for external reasons and we don't want that to require as much manual intervention.
+We've been working on our release of v3.0 of Cholla so we spent our hack day this week finalizing that and the official release was today! In addition, I tried using CUDA streams to run multiple kernels concurrently on the GPU. This didn't lead to any performance increase so I scrapped it. Per the suggestion of some other members of the group I also made PRs [#368](https://github.com/cholla-hydro/cholla/pull/368) and [#369](https://github.com/cholla-hydro/cholla/pull/369) to make some member variables private and add automatic retries of the testing step in our Jenkins pipeline; sometimes tests fails for external reasons and we don't want that to require as much manual intervention.
 
 ## Reconstruction Refactor
 
