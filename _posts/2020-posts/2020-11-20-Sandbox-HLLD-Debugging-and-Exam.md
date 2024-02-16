@@ -40,7 +40,7 @@ you can see the waves appear to be in the right spots but there are clearly bugs
 that are preventing the HLLD solver from getting the correct values in each
 state. Finding and fixing those is my next goal.
 
-![HLLD Bugged](/assets/img/2020-post-assets/11-November/HLLD-buggy output.png)
+![HLLD Bugged](/assets/img/2020-post-assets/11-November/HLLD-buggy-output.png)
 *The current output of my HLLD solver using the Brio & Wu MHD shock tube with \\( \gamma = 5/3 \\)*
 
 ![fiducial](/assets/img/2020-post-assets/11-November/Brio-Wu-MHD-shock-tube-fiducial.png)
