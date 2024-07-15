@@ -4,19 +4,21 @@ icon: fas fa-flask
 order: 2
 ---
 
-![Schneider et al 2020](/assets/img/tabs/Schneider-et-al-2020-horizontal.png)
-*Image from Schneider et. al 2020*
+# RSE Work
+
+I focus on GPU accelated HPC applications for astrophysics.
 
 # Ph.D Research
+![Schneider et al 2020](/assets/img/tabs/Schneider-et-al-2020-horizontal.png)
+*Image from Schneider et. al 2020*
 ## Adding Magnetohydrodynamics (MHD) to Cholla (Spring 2020 - Present)
-I am working with [Professor Evan Schneider](https://evaneschneider.org) to
+I worked with [Professor Evan Schneider](https://evaneschneider.org) to
 further develop [Cholla](https://github.com/cholla-hydro/cholla) a code for
 simulating astrophysical hydrodynamics. Cholla is a 3D hydrodynamics code that
 uses GPUs in parallel to greatly accelerate solving the equations of hydrodynamics.
-I am working on adding [magnetohydrodynamics (MHD)](https://en.wikipedia.org/wiki/Magnetohydrodynamics)
+I added [magnetohydrodynamics (MHD)](https://en.wikipedia.org/wiki/Magnetohydrodynamics)
 to Cholla to allow us to simulate the affects of electromagnetic fields on
-galactic winds. This will lay the groundwork for adding cosmic rays to the
-model in the future.
+galactic winds.
 
 # Masters Thesis:
 ## Time Series Photometry of the Symbiotic Star V1825 Aql and New Variable Stars in Aquila (Fall 2016-Spring 2018)

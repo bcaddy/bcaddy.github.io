@@ -14,15 +14,14 @@ timezone: America/New_York
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Robert 'Bob' Caddy                          # the main title
+title: Robert Caddy                          # the main title
 
-tagline: Ph.D Candidate, Sixth Year
-         University of Pittsburgh   # it will display as the sub-title
+tagline: Research Software Engineer
+         Princeton University   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   My personal website and research blog. I use this to provide updates on my
-  research with astrophysics computational hydrodynamics and
-  magnetohydrodynamics (MHD).
+  research and general work.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -38,7 +37,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Robert Caddy
-  email: r.caddy@pitt.edu             # change to your email address
+  email: rcaddy@princeton.edu             # change to your email address
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username      # change to your twitter homepage

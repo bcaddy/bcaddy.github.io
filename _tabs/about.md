@@ -7,13 +7,17 @@ order: 1
 ![About me picture](/assets/img/tabs/about-me.jpg)
 
 # Education:
-B.S., in Physics Honors, 2016, Purdue University
+Ph.D, in Physics, 2024, University of Pittsburgh
 
 M.S., in Physics, 2018, Bowling Green State University
 
+B.S., in Physics Honors, 2016, Purdue University
+
 # About Me
 
-I am currently a graduate student at the University of Pittsburgh Department of Physics and Astronomy working on my Ph.D in Physics. I'm studying galaxy dynamics using ultra high resolution MHD simulations of galaxies (see my research page for more info). I earned my M.S. in physics at BGSU studying symbiotic stars and variable stars in general using time series photometry. Before graduate school I spent four years at Purdue University earning my B.S. in Honors Physics with a minor in astronomy.
+I'm currently a Research Software Engineer at Princeton University working with faculty in the astrophysics department. My primary focus is GPU accelerated GPU applications though I work on a variety of other projects as well.
+
+I earned my Ph.D from the University of Pittsburgh studying galaxy dynamics using ultra high resolution MHD simulations of galaxies (see my research page for more info). I earned my M.S. in physics at BGSU studying symbiotic stars and variable stars in general using time series photometry. Before graduate school I spent four years at Purdue University earning my B.S. in Honors Physics with a minor in astronomy.
 
 While at Pittsburgh and Purdue, I've participated in Women in Physics groups. Combating patriarchal mindsets about who is welcome in STEM fields is so important: I've seen several promising physicists driven away by blatant sexism. The scientific community is poorer for their loss. Supporting diversity leads to a thriving diversity of thoughts, which leads to breakthrough discoveries.
 
