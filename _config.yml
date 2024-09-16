@@ -16,7 +16,8 @@ timezone: America/New_York
 
 title: Robert Caddy                          # the main title
 
-tagline: Research Software Engineer
+tagline: he/him <br/>
+         Research Software Engineer <br/>
          Princeton University   # it will display as the subtitle
 
 description: >-                        # used by seo meta and the atom feed
