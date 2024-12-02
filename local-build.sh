@@ -8,7 +8,7 @@
 if [[ $1 == "run" ]]; then
     # Run the website with auto update on
     set -m
-    bundle exec jekyll s -H 0.0.0.0 -l -open-url
+    bundle exec jekyll serve --livereload -open-url
     jekyll clean
 
 elif [[ $1 == "test" ]]; then
