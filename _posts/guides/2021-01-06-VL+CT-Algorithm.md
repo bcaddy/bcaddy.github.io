@@ -213,8 +213,8 @@ $$
     \begin{aligned}
         \vec{U}^{n+1/2}_{i,j,k} = \vec{U}^{n}_{i,j,k}
         - \frac{\delta t}{\delta x} \left( \vec{F}^n_{x,i+1/2,j,k} - \vec{F}^n_{x,i-1/2,j,k} \right) \\
-        - \frac{\delta t}{\delta y} \left( \vec{F}^n_{y,i+1/2,j,k} - \vec{F}^n_{y,i-1/2,j,k} \right) \\
-        - \frac{\delta t}{\delta z} \left( \vec{F}^n_{z,i+1/2,j,k} - \vec{F}^n_{z,i-1/2,j,k} \right).
+        - \frac{\delta t}{\delta y} \left( \vec{F}^n_{y,i,j+1/2,k} - \vec{F}^n_{y,i,j-1/2,k} \right) \\
+        - \frac{\delta t}{\delta z} \left( \vec{F}^n_{z,i,j,k+1/2} - \vec{F}^n_{z,i,j,k-1/2} \right).
     \end{aligned}
 $$
 
@@ -303,8 +303,8 @@ $$
     \begin{aligned}
         \vec{U}^{n+1}_{i,j,k} = \vec{U}^{n}_{i,j,k}
         - \frac{\delta t}{\delta x} \left( \vec{F}^{n+1/2}_{x,i+1/2,j,k} - \vec{F}^{n+1/2}_{x,i-1/2,j,k} \right) \\
-        - \frac{\delta t}{\delta y} \left( \vec{F}^{n+1/2}_{y,i+1/2,j,k} - \vec{F}^{n+1/2}_{y,i-1/2,j,k} \right) \\
-        - \frac{\delta t}{\delta z} \left( \vec{F}^{n+1/2}_{z,i+1/2,j,k} - \vec{F}^{n+1/2}_{z,i-1/2,j,k} \right).
+        - \frac{\delta t}{\delta y} \left( \vec{F}^{n+1/2}_{y,i,j+1/2,k} - \vec{F}^{n+1/2}_{y,i,j-1/2,k} \right) \\
+        - \frac{\delta t}{\delta z} \left( \vec{F}^{n+1/2}_{z,i,j,k+1/2} - \vec{F}^{n+1/2}_{z,i,j,k-1/2} \right).
     \end{aligned}
 $$
 
