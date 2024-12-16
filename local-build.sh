@@ -19,6 +19,7 @@ elif [[ $1 == "test" ]]; then
 elif [[ $1 == "update" ]]; then
     echo "See this page for instructions on updating Chirpy:"
     echo "https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide"
+    echo "or use this https://github.com/cotes2020/chirpy-starter/compare/v4.0.0...v5.0.0 to compare versions then run `bundle update`"
     echo ""
     echo "See this page for instructions on updating Ruby"
     echo "https://stackoverflow.com/questions/51126403/you-dont-have-write-permissions-for-the-library-ruby-gems-2-3-0-directory-ma"
