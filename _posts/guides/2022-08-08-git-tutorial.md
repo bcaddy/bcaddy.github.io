@@ -117,10 +117,19 @@ on general structure and ideas for writing good commit messages. There are also
 some good more automated tools such as
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
-Personally I make sure that each commit title answers the questions "If applied,
-this commit will...", as long as you're consistent with your team, clear, and
-concise it doesn't really matter what you choose. I am looking into using
-[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) though.
+At the end of the message you can add [git
+trailers](https://git-scm.com/docs/git-interpret-trailers) if you want. They
+provide an easy, machine readable, way to add metadata to your commits about
+other people who were involved in the creation of the commit. Common examples
+would be people who coauthored, provided minor assistance, brought an issue to
+your attention, etc.
+
+Personally I use [Conventional
+Commits](https://www.conventionalcommits.org/en/v1.0.0/) format and have found
+it to be very easy to use and clear after I got used to it. If you don't want to
+do that however make sure that each commit title answers the questions "If
+applied, this commit will...", and as long as you're consistent with your team,
+clear, and concise it doesn't matter a ton what you choose.
 
 You can setup a commit message
 template by adding the following lines to your `.gitconfig` file.
@@ -130,24 +139,84 @@ template by adding the following lines to your `.gitconfig` file.
     template = /path/to/template/git-message-template.txt
 ```
 
-My commit message template
+My commit message template has notes on how to use Conventional Commits, git
+trailers, and some info on keywords for GitHub. It's fairly extensive but it
+means that I have notes on all commit message related things right in front of
+me whenever I'm writing a commit message.
 
 ```
-# You MUST limit the title to 50 characters and lines to 72 characters
-# The 50 and 72 character limits are indicated with a '|' in each prompt
-#
-# If applied, this commit will...                |
+# Template documentation is at the end
+# ================================================
+# If applied, this commit will...    (soft limit ↓)        (hard limit ↓)
+# <type>[(scope)][!]: <description>              |                     |
 
 
 # Why is this change needed?                                           |
-#Prior to this change,
 
-# How does it address the issue? (response options, )                  |
-# to close multiple each issue must be prefaced with the keyword
-#Partially addresses issue #X
-#Resolves #X
-#Fixes #X
-#Closes #X
+
+# Footers/git trailers (Trailers should have 2 newlines before them)   |
+#BREAKING CHANGE:
+#Co-authored-by: Full Name <email@domain.extension> # They helped in detail with this patch. Confirmed supported by GitHub
+#Helped-by:      Full Name <email@domain.extension> # They helped without providing exact details
+#Suggested-by:   Full Name <email@domain.extension> # The person who suggested the patch
+#Acked-by:       Full Name <email@domain.extension> # Someone more familiar with the area approves of this patch
+#Reported-by:    Full Name <email@domain.extension> # Credit person who found the but that this patch fixes
+#Tested-by:      Full Name <email@domain.extension> # Tested by this person
+#Signed-off-by:  Full Name <email@domain.extension> # Signed off by this person. Usually used to agree to the license
+#Reviewed-by:    Full Name <email@domain.extension> # Indicates the person has carefully reviewed this patch
+
+# ======================================================================
+# Documentation
+# ======================================================================
+# ==============
+# Summary
+# ==============
+# This template is for Conventional Commit messages. Sections in <> are
+# required and sections in [] are optional. Including the ! in the
+# header indicates a breaking change.
+#
+# The only exception is the git trailers which reference another git
+# user. That git user's email should be inside a pair of angled brackets
+# like <name@email.com>.
+
+# ==============
+# Line Length
+# ==============
+# The title line should be soft limited and 50 characters and hard
+# limited at 72 characters. Lines in the body should be wrapped at 72
+# characters. These limits were chosen partly due to convention
+# (50/72 formatting) and due to the fact that GitHub likes to add
+# ellipses to lines longer than 72 characters
+# The 50 and 72 character limits are indicated with a '|' in each prompt
+
+# ==============
+# Commit types (from https://github.com/pvdlg/conventional-changelog-metahub)
+# ==============
+# | Commit Type | Title                    | Description                                                                                                 |
+# |:-----------:|--------------------------|-------------------------------------------------------------------------------------------------------------|
+# |   `feat`    | Features                 | A new feature                                                                                               |
+# |    `fix`    | Bug Fixes                | A bug Fix                                                                                                   |
+# |   `docs`    | Documentation            | Documentation only changes                                                                                  |
+# |   `style`   | Styles                   | Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)      |
+# | `refactor`  | Code Refactoring         | A code change that neither fixes a bug nor adds a feature                                                   |
+# |   `perf`    | Performance Improvements | A code change that improves performance                                                                     |
+# |   `test`    | Tests                    | Adding missing tests or correcting existing tests                                                           |
+# |   `build`   | Builds                   | Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)         |
+# |    `ci`     | Continuous Integrations  | Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs) |
+# |   `chore`   | Chores                   | Other changes that don't modify src or test files                                                           |
+# |  `revert`   | Reverts                  | Reverts a previous commit                                                                                   |
+
+# ==============
+# Referencing/Closing GitHub issues/PRs
+# ==============
+# Specific issues and PRs can be referenced and automatically closed
+# with the following keywords anywhere in the commit. There are NOT
+# footers. To close multiple each issue must be prefaced with a keyword.
+#
+# Keywords:
+#   - Resolve/Resolves/Resolved #X
+#   - Fix/Fixes/Fixed #X
+#   - Close/Closes/Closed #X
 ```
 
 ### Git amend
@@ -191,9 +260,21 @@ use GitLens for VS Code or GitHub.
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph), A very clean and usable graph of the history of the repo. An improved version of `git log --oneline --graph`
 - Diffs and merge conflicts are much simplier
 
-### [Ack](https://beyondgrep.com)
+### Searching
 
-A simple tool for recursively searching text files. General usage is just `ack "pattern"` and it will recuresivley search for the pattern while ignoring common VCS directories, binaries, etc. My alias for it is:
+#### VS Code
+
+VS Code has a great search pane that I use most of the time when I have VS Code
+open in the directory that I'm searching. It allows easy find and replace with
+reasonably sophisticated search tools.
+
+#### [Ack](https://beyondgrep.com)
+
+I use Ack when I don't have VS Code open or if I need to parse many, many files
+and VS Code would be too slow. Ack is a simple tool for recursively searching
+text files. General usage is just `ack "pattern"` and it will recuresivley
+search for the pattern while ignoring common VCS directories, binaries, etc. My
+alias for it is:
 ```bash
 alias ack='ack --ignore-dir={_site,.git,.container,._site} --ignore-case --literal'
 ```
@@ -209,25 +290,151 @@ alias ack='ack --ignore-dir={_site,.git,.container,._site} --ignore-case --liter
 7. Perl Regex
 8. Similar flags to grep
 
-## 5. Git Config & Aliases
+## 5. Git Configuration Files
 
-*[Link to my gitconfig skeleton](https://github.com/bcaddy/dotfiles-skeleton/blob/master/gitconfig)*
+### `.gitconfig`
 
-Highlight these Aliases: (run this by showing my gitconfig on the left and
-commands on the right in a split terminal window)
+Your global settings for git are stored in the file `.gitconfig` in your home
+directory. You can also have settings on a per repo basis but I haven't
+personally had much need for that. Inside your `.gitconfig` is information
+identifying who is making commits, what editor they're using, etc.
 
-- `stick` - a clearer and more concise version of git log
-- `longStick` - same as `stick` without the length limit
-- `check` - run `Repo-check-updates.sh`
-- `hub` - if on macOS then open the GitHub page in the default browser. If not
-  on macOS then print the URL
-- `alias root='cd $(git rev-parse --show-toplevel)'`
-- If you're doing anything even moderately complicated I recommend writing a bash script for it and calling that script rather than writing it directly in the gitconfig. Doing the latter can give weird results. Also note, all bash commands in git aliases are run in a separate shell so commands with stuff like `cd` in it won't produce the desired effect.
+Probably the most complex use of `.gitconfig` is aliases. You can set up aliases
+for git the same way you can with bash or any other shell. This can enable you
+to either shorten commands that you use often or make long, complex commands
+faster and more reliable to use. My `.gitconfig` is below with comments
+describing the more complicated things.
 
-### The .gitignore File
+```
+[core]
+  editor = nano
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[init]
+  defaultBranch = main
+[user]
+  name = Bob Caddy
+  email = rcaddy@princeton.edu
+  username = bcaddy # My GitHub Username
+[github]
+  user = bcaddy
+  token = token
+[commit]
+  template = ~/dotfiles/git-message-template.txt
+[pull]
+  rebase = false
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[alias]
+  # Simple aliases
+  stick = log --oneline --decorate --graph --all -n 30  # my prefered version of git log
+  longStick = log --oneline --decorate --graph --all    # my prefered version of git log with extra length
+  stat  = status                                        # short version of status
+  com   = commit                                        # short version of commit
+  ca    = commit --all                                  # add and commit at once
+  fix-commit = commit --edit --file=.git/COMMIT_EDITMSG
+  subpull = pull --recurse-submodule                    # Pull both the parent and submodule repos
+  pull-force = !git fetch --all && git reset --hard @{u}  # Pull and overwrite local changes
+  alias = config --get-regexp alias
+  ri2 = rebase -i HEAD~2
+  su = submodule update
+  co = checkout
+
+  # More complex aliases
+  hub = "!f() { \
+  echo-github-url.sh; \ # on macOS open the GitHub repo in your browser, on other OSs print the URL
+  }; f"
+[include]
+  path = /path/to/additional/gitconfig # you can include additional gitconfig files if you want
+```
+
+The `echo-github-url.sh` script mentioned above is here
+
+```bash
+#!/usr/bin/env bash
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's,:,/,' -e 's,git@,http://,' | xargs open
+else
+    git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's,:,/,' -e 's,git@,http://,'
+fi;
+```
+
+### `.gitignore`
 
 Your `.gitignore` files tells git which files to ignore. Good for compiled code,
-logs, OS files, etc.
+logs, OS files, etc. This goes in the root directory of your repo. Here's the
+default one I usually use.
+
+```gitignore
+# Files specific to this repo #
+##############################
+
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.mod
+*.a
+a.out
+*.dSYM
+*.gch
+__pycache__
+*.pyc
+*.pyx
+*.prof
+
+# Packages & Archives#
+######################
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+```
+
+## `.gitmodules` (optional)
+
+Belongs in your repo root and is used to store information about any [git
+submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules) you
+might have. Git submodules are beyond the scope of this document but they
+provide an easy way to have "sub repos" within your repo.
+
+## `.git-blame-ignore-revs` (optional)
+
+Belongs in your repo root and is used to tell `git blame` to ignore specific
+commits. To enable this you need to run this command in the repo:
+`git config blame.ignoreRevsFile .git-blame-ignore-revs`
+Requires git v2.23 or greater and each entry must include the full 40 character
+hash. This can be handy for ignoring commits that just do formatting or similar.
 
 ## 6. Workflow
 
@@ -236,6 +443,7 @@ lot of commits at an intermediate state. Often these intermediate states are
 poorly designed, broken, or bad in some other way. Ideally we would like to
 reduce all our work to one, or a couple, high quality commits before merging
 them. Here's two options on how to do that; you should always backup your branch
+by creating a new branch from it (`git branch backup-old-branch-name`)
 before trying either of these methods.
 
 ### Option 1: Safely Squash and Rebase your Git Commits
@@ -264,7 +472,7 @@ git rebase -i HEAD~[number of commits]
 # OR
 git rebase -i [SHA]
 # SHA is the unique identifier for a given commit. It's a 40 character hash
-# (SHA=Simple Hashing Algorithm) which is often referenced byt just the first 7
+# (SHA=Simple Hashing Algorithm) which is often referenced by just the first 7
 # characters. You'll usually see it just to the left of the commit message
 
 # Check that your main branch is up to date
@@ -345,6 +553,44 @@ git merge featureBranch
 git push
 ```
 
+### Group Workflow
+
+What I've written above is a workflow for an individual developer and it's
+intended to work well with a team but is not itself a "team workflow". What the
+best workflow is for an entire team is a huge subject of debate with a myriad of
+ideas about what works best where with what kind of team. I'm going to provide a
+very simple workflow that has worked well for me along with some general
+suggestions and observations from personal experience. Do not take this as
+gospel, you will probably have to experiment to figure out what works well for
+your team. The workflow I describe is intended to be a high level overview, lots
+of people have written much better guides about the details.
+
+I recommend seperating the "stable", "development", and "in process feature"
+parts of developing into separate branches or even separate forks. Ideally this
+means have a `main` branch that is what you expect users to use. The code on
+this branch is stable, bug free (as far as you know anyway), and is updated
+reasonably frequently. The `dev` branch has all of you features that are
+semi-complete but at a reasonable stable state. Most commits on this branch
+should pass the tests but the features they're working on implementing might not
+be complete yet. `feature-branches` branch off of dev and contain the things
+you're actively working on day-to-day and should be merged back to `dev` using
+the workflow I mentioned above and pull requests. Generally I recommend that
+individual devs work in their own fork of a repo where they can do whatever they
+want, only the PRs back to the main repo need to be clean and tidy.
+
+Probably the most common mistake people make when working in a group is not
+merging their work to dev often enough because the feature their feature
+branches are implementing is far too large. Generally the features you choose to
+implement in a specific branch should be small, something you can do in less
+than 2 weeks (preferably less than 1) and consist of a few hundred changes at
+most. This means that your branch is never too far behind the `dev` branch that
+the team is working on and everyone else gets your changes quickly. This goes a
+**long** way to reducing merge conflicts.
+
+What I've described here is a very, very rough approximation of an [agile
+workflow](https://agilemanifesto.org). Much more has been written about agile
+elsewhere and I cannot do it justice.
+
 ## 7. Assorted Useful Git Commands
 
 ### Git Reset
@@ -423,7 +669,7 @@ for more info
 
 `git clean` is used for operating on untracked files. Useful for deleting many
 untracked files if you need to. Go read the documentation if you think you might
-need this
+need this. This is often more easily done in the VS Code changes view.
 
 ### Git `-C path`
 
