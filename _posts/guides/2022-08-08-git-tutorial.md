@@ -114,7 +114,7 @@ length limitations for optimal display which are noted in the template message
 below.
 [Here's a good guide](https://medium.com/@corrodedlotus/which-tense-should-be-used-on-a-git-commit-message-121cb641134b)
 on general structure and ideas for writing good commit messages. There are also
-some good more automated tools such as
+some good tools that can help with structure and automation such as
 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 At the end of the message you can add [git
@@ -124,11 +124,11 @@ other people who were involved in the creation of the commit. Common examples
 would be people who coauthored, provided minor assistance, brought an issue to
 your attention, etc.
 
-Personally I use [Conventional
+Personally I use the [Conventional
 Commits](https://www.conventionalcommits.org/en/v1.0.0/) format and have found
 it to be very easy to use and clear after I got used to it. If you don't want to
 do that however make sure that each commit title answers the questions "If
-applied, this commit will...", and as long as you're consistent with your team,
+applied, this commit will..." and as long as you're consistent with your team,
 clear, and concise it doesn't matter a ton what you choose.
 
 You can setup a commit message
@@ -219,11 +219,12 @@ me whenever I'm writing a commit message.
 #   - Close/Closes/Closed #X
 ```
 
-### Git amend
+### Modifying Commit Messages
 
 `git commit --amend` lets you edit the last commit message. If you've already
 pushed that commit you'll need to force push the change. Editing commit messages
-for older commits is doable but much more complex.
+for older commits is doable but much more complex, look up a guide if you need
+to do this.
 
 ### Branches
 
@@ -239,7 +240,7 @@ Branches should generally be short lived: make a branch, add a small feature, me
 current status of rebases, merges, staged files, unstaged files, tracked files,
 etc. Has flags for targeting specific branches, what info is displayed, etc.
 
-### Git Log and Aliases
+### Git Log
 
 - `git log` shows lots of info but it isn't organized super well.
 - `git log --oneline --decorate --graph --all` gives a prettier picture.
@@ -257,7 +258,11 @@ use GitLens for VS Code or GitHub.
 ### Visual Studio Code (VSC) Extentions
 
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens), a million amazing features. Just install it asap. Theres a paid version with a few more features but it's free for public repos so you should sign up.
-- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph), A very clean and usable graph of the history of the repo. An improved version of `git log --oneline --graph`
+- [Git
+  Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph),
+  A very clean and usable graph of the history of the repo. An improved version
+  of `git log --oneline --graph`. GitLens now has a similar feature, though I
+  prefer the Git Graph version; that's entirely a personal preference.
 - Diffs and merge conflicts are much simplier
 
 ### Searching
@@ -343,8 +348,10 @@ describing the more complicated things.
   co = checkout
 
   # More complex aliases
+  # ====================
+  # on macOS this opens the GitHub repo in your browser, on other OSs print the URL
   hub = "!f() { \
-  echo-github-url.sh; \ # on macOS open the GitHub repo in your browser, on other OSs print the URL
+  echo-github-url.sh; \
   }; f"
 [include]
   path = /path/to/additional/gitconfig # you can include additional gitconfig files if you want
@@ -368,9 +375,9 @@ Your `.gitignore` files tells git which files to ignore. Good for compiled code,
 logs, OS files, etc. This goes in the root directory of your repo. Here's the
 default one I usually use.
 
-```gitignore
+```
 # Files specific to this repo #
-##############################
+###############################
 
 
 # Compiled source #
@@ -391,8 +398,8 @@ __pycache__
 *.pyx
 *.prof
 
-# Packages & Archives#
-######################
+# Packages & Archives #
+#######################
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
 *.7z
@@ -557,39 +564,24 @@ git push
 
 What I've written above is a workflow for an individual developer and it's
 intended to work well with a team but is not itself a "team workflow". What the
-best workflow is for an entire team is a huge subject of debate with a myriad of
-ideas about what works best where with what kind of team. I'm going to provide a
-very simple workflow that has worked well for me along with some general
-suggestions and observations from personal experience. Do not take this as
-gospel, you will probably have to experiment to figure out what works well for
-your team. The workflow I describe is intended to be a high level overview, lots
-of people have written much better guides about the details.
-
-I recommend seperating the "stable", "development", and "in process feature"
-parts of developing into separate branches or even separate forks. Ideally this
-means have a `main` branch that is what you expect users to use. The code on
-this branch is stable, bug free (as far as you know anyway), and is updated
-reasonably frequently. The `dev` branch has all of you features that are
-semi-complete but at a reasonable stable state. Most commits on this branch
-should pass the tests but the features they're working on implementing might not
-be complete yet. `feature-branches` branch off of dev and contain the things
-you're actively working on day-to-day and should be merged back to `dev` using
-the workflow I mentioned above and pull requests. Generally I recommend that
-individual devs work in their own fork of a repo where they can do whatever they
-want, only the PRs back to the main repo need to be clean and tidy.
+best workflow is for an entire team is a huge subject of debate with a [myriad of
+ideas](https://en.wikipedia.org/wiki/Software_development_process) about what
+works best where with what kind of team. Most are variants of
+[Agile Software Development](https://agilemanifesto.org) such as
+[Extreme Programming](https://en.wikipedia.org/wiki/Extreme_programming) and
+[Scrum](https://www.scrum.org/learning-series/what-is-scrum/). I've had good
+luck more Agile development and it's popular for a reason, I encourage you to
+spend some time looking into Agile software development practices.
 
 Probably the most common mistake people make when working in a group is not
-merging their work to dev often enough because the feature their feature
+merging their work to `dev` often enough because the feature their feature
 branches are implementing is far too large. Generally the features you choose to
-implement in a specific branch should be small, something you can do in less
-than 2 weeks (preferably less than 1) and consist of a few hundred changes at
-most. This means that your branch is never too far behind the `dev` branch that
-the team is working on and everyone else gets your changes quickly. This goes a
-**long** way to reducing merge conflicts.
-
-What I've described here is a very, very rough approximation of an [agile
-workflow](https://agilemanifesto.org). Much more has been written about agile
-elsewhere and I cannot do it justice.
+implement in a specific branch should be small, typically something you can do in a week
+or less (2 weeks at the absolute most) and consist of less than 300 changes,
+though there is some flexibility there. This means that your branch is never too
+far behind the `dev` branch that the team is working on and everyone else gets
+your changes quickly. This goes a **long** way to reducing merge conflicts and
+making collaborating much easier.
 
 ## 7. Assorted Useful Git Commands
 
