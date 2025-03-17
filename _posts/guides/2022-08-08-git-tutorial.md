@@ -156,14 +156,6 @@ me whenever I'm writing a commit message.
 
 # Footers/git trailers (Trailers should have 2 newlines before them)   |
 #BREAKING CHANGE:
-#Co-authored-by: Full Name <email@domain.extension> # They helped in detail with this patch. Confirmed supported by GitHub
-#Helped-by:      Full Name <email@domain.extension> # They helped without providing exact details
-#Suggested-by:   Full Name <email@domain.extension> # The person who suggested the patch
-#Acked-by:       Full Name <email@domain.extension> # Someone more familiar with the area approves of this patch
-#Reported-by:    Full Name <email@domain.extension> # Credit person who found the but that this patch fixes
-#Tested-by:      Full Name <email@domain.extension> # Tested by this person
-#Signed-off-by:  Full Name <email@domain.extension> # Signed off by this person. Usually used to agree to the license
-#Reviewed-by:    Full Name <email@domain.extension> # Indicates the person has carefully reviewed this patch
 
 # ======================================================================
 # Documentation
@@ -178,16 +170,6 @@ me whenever I'm writing a commit message.
 # The only exception is the git trailers which reference another git
 # user. That git user's email should be inside a pair of angled brackets
 # like <name@email.com>.
-
-# ==============
-# Line Length
-# ==============
-# The title line should be soft limited and 50 characters and hard
-# limited at 72 characters. Lines in the body should be wrapped at 72
-# characters. These limits were chosen partly due to convention
-# (50/72 formatting) and due to the fact that GitHub likes to add
-# ellipses to lines longer than 72 characters
-# The 50 and 72 character limits are indicated with a '|' in each prompt
 
 # ==============
 # Commit types (from https://github.com/pvdlg/conventional-changelog-metahub)
@@ -207,6 +189,22 @@ me whenever I'm writing a commit message.
 # |  `revert`   | Reverts                  | Reverts a previous commit                                                                                   |
 
 # ==============
+# Git Trailers
+# ==============
+# Should be of the format `TRAILER: Full Name <email@domain.extension>`
+# with 2 newlines before the trailer
+# | Trailer         | Description                                                          |
+# |:---------------:|----------------------------------------------------------------------|
+# | Co-authored-by: | They helped in detail with this patch. Confirmed supported by GitHub |
+# | Helped-by:      | They helped without providing exact details                          |
+# | Suggested-by:   | The person who suggested the patch                                   |
+# | Acked-by:       | Someone more familiar with the area approves of this patch           |
+# | Reported-by:    | Credit person who found the but that this patch fixes                |
+# | Tested-by:      | Tested by this person                                                |
+# | Signed-off-by:  | Signed off by this person. Usually used to agree to the license      |
+# | Reviewed-by:    | Indicates the person has carefully reviewed this patch               |
+
+# ==============
 # Referencing/Closing GitHub issues/PRs
 # ==============
 # Specific issues and PRs can be referenced and automatically closed
@@ -217,6 +215,16 @@ me whenever I'm writing a commit message.
 #   - Resolve/Resolves/Resolved #X
 #   - Fix/Fixes/Fixed #X
 #   - Close/Closes/Closed #X
+
+# ==============
+# Line Length
+# ==============
+# The title line should be soft limited and 50 characters and hard
+# limited at 72 characters. Lines in the body should be wrapped at 72
+# characters. These limits were chosen partly due to convention
+# (50/72 formatting) and due to the fact that GitHub likes to add
+# ellipses to lines longer than 72 characters
+# The 50 and 72 character limits are indicated with a '|' in each prompt
 ```
 
 ### Modifying Commit Messages
