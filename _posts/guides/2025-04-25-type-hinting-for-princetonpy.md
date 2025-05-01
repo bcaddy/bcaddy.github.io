@@ -2,7 +2,7 @@
 title:      Type Hinting for PrincetonPy                 # Title
 author:     Robert Caddy               # Author Name
 date:       2025-04-25 09:00:00 -0400  # Date
-categories: []     # Catagories, no more than 2
+categories: []     # Categories, no more than 2
 tags:       [Python, Type Hinting, Guides]                     # Tags, any number
 pin:        false                      # Should this post be pinned?
 toc:        true                       # Table of Contents?
@@ -16,7 +16,7 @@ math:       false                      # Does this post contain math?
 
 Type hinting in Python is the current supported way of adding static strong(ish) typing to Python. It only operates statically, i.e. not at run time, with the help of tools like [mypy](https://mypy.readthedocs.io/en/stable/), [pyright](https://github.com/microsoft/pyright), [pytype](https://github.com/google/pytype), [pyre](https://pyre-check.org), and whatever [Astral](https://astral.sh) comes up with when they finish their type checker. I've only used mypy so I will discuss typing in that context. Mypy, and the other type checkers to various degrees, support gradual typing, only enforcing typing on typed code and ignoring untyped code. You can force it to do typing on all code with the `--strict` flag, or more granularly with other flags.
 
-Currently you have, broadly speaking, three options on dealing with types in Python and function/class boundaries when you don't know what types your users might pass in:
+Without type hinting you have, broadly speaking, three options on dealing with types in Python and function/class boundaries when you don't know what types your users might pass in:
 
 1. Lean into duck typing hope for the best, accepting that it might introduce bugs or just crash if the user passes the wrong type
 2. Put `is instance(var, type)` everywhere
@@ -26,7 +26,7 @@ None of these options are particularly good and type hinting hopes to solve, or 
 
 ## Language Support
 
-Python 2 is not well supported since it's been sunsetted for 5 years. The type hinting syntax I'm discussing here was introduced in Python 3.5 and has been expanded and improved upon in most releases since then. I'm currently using Python 3.13 and will assume you are too. I recommend Python 3.10 at a minimum since it significantly improves the union syntax. Python 3.7+ can get Python 3.13 typing with `from __future__ import annotations`.
+Python 2 is not well supported and it's been sunsetted for 5 years. The type hinting syntax I'm discussing here was introduced in Python 3.5 and has been expanded and improved upon in most releases since then. I'm currently using Python 3.13 and will assume you are too. I recommend Python 3.10 at a minimum since it significantly improves the union syntax. Python 3.7+ can get Python 3.13 typing with `from __future__ import annotations`.
 
 ## Syntax
 
@@ -142,7 +142,7 @@ def f(x: DoesSomething) -> None:
 
 There's a lot more you can do with protocols, see [here](https://henryiii.github.io/se-for-sci/content/week08/typing.html#structural-subtyping) for a discussion.
 
-## Third Party Libraries
+## Library Support
 
 Support for types in third partly libraries is all over the place. I'll just highlight a few libraries that I've used.
 
