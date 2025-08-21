@@ -54,6 +54,10 @@ Due to the large data sizes I would need to use some kind of framework that supp
 
 Converting a large set of ASCII track files only takes a few minutes. Converting a 2TB binary dataset takes about 2 hours on Stellar using 16 cores and 256GB of memory. This is a one-time cost that also computes several useful quantities along the way for easier future searching. I don't have hard numbers for how much faster this is but my estimate is that it reduces a single search from hours to minutes.
 
+### Reading Trace Files
+
+Trace files (`.trace_mpiio_optimized` files) are very similar to track files except instead of following a particle through the simulation the record the values at a specific point in space. They are processed similarly to the binary track files, they just take a little less time since they don't require as much processing.
+
 ### Reading History Files
 
 `.hst` files can be loaded with the `load_hst_file` function which returns a Polars DataFrame. The loading function accounts for any restarts and only uses data from the latest run. This files are small so I didn't do any performance testing, load times are usually a fraction of a second.
