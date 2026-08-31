@@ -156,6 +156,9 @@ me whenever I'm writing a commit message.
 
 # Footers/git trailers (Trailers should have 2 newlines before them)   |
 #BREAKING CHANGE:
+#Assisted-by: Claude:opus-4-8
+#Assisted-by: Claude:fable-5
+#Signed-off-by: FULL NAME <YOUR_EMAIL@DOMAIN.EXTENSION>
 
 # ======================================================================
 # Documentation
@@ -203,6 +206,20 @@ me whenever I'm writing a commit message.
 # | Tested-by:      | Tested by this person                                                |
 # | Signed-off-by:  | Signed off by this person. Usually used to agree to the license      |
 # | Reviewed-by:    | Indicates the person has carefully reviewed this patch               |
+# | Assisted-by:    | Mostly used to indicate help from an LLM                             |
+
+# ===========
+# Citing LLMs
+# ===========
+# The [Linux Standard](https://github.com/torvalds/linux/blob/master/Documentation/process/coding-assistants.rst)
+# requires that you cite LLM usage like
+# `Assisted-by: AGENT_NAME:MODEL_VERSION [TOOL1] [TOOL2]`. This is likely to
+# change and so you should review this link regularly.
+#
+# Examples
+# Assisted-by: Claude:fable-5
+# Assisted-by: Claude:opus-4-8
+# Assisted-by: Claude:opus-4-8-20260101 (if you know the model release date)
 
 # ==============
 # Referencing/Closing GitHub issues/PRs
@@ -231,8 +248,8 @@ me whenever I'm writing a commit message.
 
 `git commit --amend` lets you edit the last commit message. If you've already
 pushed that commit you'll need to force push the change. Editing commit messages
-for older commits is doable but much more complex, look up a guide if you need
-to do this.
+for older commits is doable but much more complex using `git rebase`, look up a 
+guide if you need to do this.
 
 ### Branches
 
@@ -385,7 +402,7 @@ default one I usually use.
 
 ```
 # Files specific to this repo #
-###############################
+##############################
 
 
 # Compiled source #
@@ -403,11 +420,11 @@ a.out
 *.gch
 __pycache__
 *.pyc
-*.pyx
 *.prof
+**/target/
 
-# Packages & Archives #
-#######################
+# Packages & Archives#
+######################
 # it's better to unpack these files and commit the raw source
 # git has its own built in compression methods
 *.7z
@@ -424,6 +441,16 @@ __pycache__
 *.log
 *.sql
 *.sqlite
+
+# Editor/IDE/Tooling Files #
+############################
+*~
+\#*#
+.#*
+.cproject
+.project
+TAGS
+.cache/
 
 # OS generated files #
 ######################
