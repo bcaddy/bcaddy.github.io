@@ -135,7 +135,7 @@ $$
     \; \; \; \text{and} \; \;
     \vec{U}_k = \begin{bmatrix}
             \rho_k \\
-            \rho_k S_k \\
+            \rho_k v_k \\
             E_k
          \end{bmatrix}
 $$
